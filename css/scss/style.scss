@@ -4,12 +4,15 @@
 @import "sucss/sucss";
 
 .row.wrapper {
-	background-color: lighten(#f00, 25%);
 	color: #fff;
 	text-align: center;
 	font-size: 1.25em;
+	[class*="col-"] {
+		background-color: lighten(#f00, 37.5%);
+	}
 }
 
 .inner {
 	background-color: #f00;
+	height: 150px;
 }

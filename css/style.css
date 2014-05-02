@@ -798,13 +798,17 @@ h6, .h6 {
 
 /* line 6, scss/style.scss */
 .row.wrapper {
-  background-color: #ff8080;
   color: #fff;
   text-align: center;
   font-size: 1.25em;
 }
+/* line 10, scss/style.scss */
+.row.wrapper [class*="col-"] {
+  background-color: #ffbfbf;
+}
 
-/* line 13, scss/style.scss */
+/* line 15, scss/style.scss */
 .inner {
   background-color: #f00;
+  height: 150px;
 }
