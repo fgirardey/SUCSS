@@ -14,16 +14,138 @@
 		<script type="text/javascript" src="https://raw.githubusercontent.com/scottjehl/Respond/master/dest/respond.min.js"></script>
 	</head>
 	<body>
-		<header class="header row">
-			<div class="col-2">
-				<div class="inner">
-					<img width="450" height="200" src="http://lorempicsum.com/futurama/450/200/2" alt="">
+		<div class="row">
+			<div class="row">
+				<h1>12 Colonnes</h1>
+			</div>
+			<div class="row wrapper">
+				<!-- (div.col-1>.inner>{col-1})*12 -->
+				<div class="col-1">
+					<div class="inner">col-1</div>
+				</div>
+				<div class="col-1">
+					<div class="inner">col-1</div>
+				</div>
+				<div class="col-1">
+					<div class="inner">col-1</div>
+				</div>
+				<div class="col-1">
+					<div class="inner">col-1</div>
+				</div>
+				<div class="col-1">
+					<div class="inner">col-1</div>
+				</div>
+				<div class="col-1">
+					<div class="inner">col-1</div>
+				</div>
+				<div class="col-1">
+					<div class="inner">col-1</div>
+				</div>
+				<div class="col-1">
+					<div class="inner">col-1</div>
+				</div>
+				<div class="col-1">
+					<div class="inner">col-1</div>
+				</div>
+				<div class="col-1">
+					<div class="inner">col-1</div>
+				</div>
+				<div class="col-1">
+					<div class="inner">col-1</div>
+				</div>
+				<div class="col-1">
+					<div class="inner">col-1</div>
 				</div>
 			</div>
-			<div class="col-10">
-				<p>yo</p>
+		</div>
+		<div class="row">
+			<div class="row">
+				<h1>6 Colonnes</h1>
 			</div>
-		</header>
+			<div class="row wrapper">
+				<!-- (div.col-2>.inner>{col-2})*6 -->
+				<div class="col-2">
+					<div class="inner">col-2</div>
+				</div>
+				<div class="col-2">
+					<div class="inner">col-2</div>
+				</div>
+				<div class="col-2">
+					<div class="inner">col-2</div>
+				</div>
+				<div class="col-2">
+					<div class="inner">col-2</div>
+				</div>
+				<div class="col-2">
+					<div class="inner">col-2</div>
+				</div>
+				<div class="col-2">
+					<div class="inner">col-2</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="row">
+				<h1>4 Colonnes</h1>
+			</div>
+			<div class="row wrapper">
+				<!-- (div.col-3>.inner>{col-3})*4 -->
+				<div class="col-3">
+					<div class="inner">col-3</div>
+				</div>
+				<div class="col-3">
+					<div class="inner">col-3</div>
+				</div>
+				<div class="col-3">
+					<div class="inner">col-3</div>
+				</div>
+				<div class="col-3">
+					<div class="inner">col-3</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="row">
+				<h1>3 Colonnes</h1>
+			</div>
+			<div class="row wrapper">
+				<!-- (div.col-4>.inner>{col-4})*3 -->
+				<div class="col-4">
+					<div class="inner">col-4</div>
+				</div>
+				<div class="col-4">
+					<div class="inner">col-4</div>
+				</div>
+				<div class="col-4">
+					<div class="inner">col-4</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="row">
+				<h1>2 Colonnes</h1>
+			</div>
+			<div class="row wrapper">
+				<!-- (div.col-6>.inner>{col-6})*2 -->
+				<div class="col-6">
+					<div class="inner">col-6</div>
+				</div>
+				<div class="col-6">
+					<div class="inner">col-6</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="row">
+				<h1>1 Colonne</h1>
+			</div>
+			<div class="row wrapper">
+				<!-- (div.col-12>.inner>{col-12})*1 -->
+				<div class="col-12">
+					<div class="inner">col-12</div>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript">document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	</body>
 </html>

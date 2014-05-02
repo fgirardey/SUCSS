@@ -3,8 +3,11 @@
 @import "settings";
 @import "sucss/sucss";
 
-.row {
-	background-color: lighten(#f00, 50%);
+.row.wrapper {
+	background-color: lighten(#f00, 25%);
+	color: #fff;
+	text-align: center;
+	font-size: 1.25em;
 }
 
 .inner {

@@ -79,13 +79,9 @@ body {
 	font-family: $body-font-family;
 }
 
-.left {
-	float: left;
-}
+.left {	float: left !important; }
 
-.right {
-	float: right;
-}
+.right { float: right !important; }
 
 .clearfix {
 	@include clearfix();
