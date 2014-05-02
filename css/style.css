@@ -479,52 +479,69 @@ body {
   display: none;
 }
 
-/* line 99, scss/sucss/components/_global.scss */
+/* line 98, scss/sucss/components/_global.scss */
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+/* line 103, scss/sucss/components/_global.scss */
+.ie6 img, .ie7 img, .ie8 img {
+  width: inherit;
+}
+
+/* line 110, scss/sucss/components/_global.scss */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 116, scss/sucss/components/_global.scss */
 .s-collapse {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
 
-/* line 104, scss/sucss/components/_global.scss */
+/* line 121, scss/sucss/components/_global.scss */
 .s-collapse-left {
   padding-left: 0 !important;
 }
 
-/* line 108, scss/sucss/components/_global.scss */
+/* line 125, scss/sucss/components/_global.scss */
 .s-collapse-right {
   padding-right: 0 !important;
 }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 114, scss/sucss/components/_global.scss */
+  /* line 131, scss/sucss/components/_global.scss */
   .m-collapse {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
 
-  /* line 118, scss/sucss/components/_global.scss */
+  /* line 135, scss/sucss/components/_global.scss */
   .m-collapse-left {
     padding-left: 0 !important;
   }
 
-  /* line 121, scss/sucss/components/_global.scss */
+  /* line 138, scss/sucss/components/_global.scss */
   .m-collapse-right {
     padding-right: 0 !important;
   }
 }
 @media only screen and (min-width: 64.0625em) {
-  /* line 127, scss/sucss/components/_global.scss */
+  /* line 144, scss/sucss/components/_global.scss */
   .l-collapse {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
 
-  /* line 131, scss/sucss/components/_global.scss */
+  /* line 148, scss/sucss/components/_global.scss */
   .l-collapse-left {
     padding-left: 0 !important;
   }
 
-  /* line 134, scss/sucss/components/_global.scss */
+  /* line 151, scss/sucss/components/_global.scss */
   .l-collapse-right {
     padding-right: 0 !important;
   }
@@ -557,175 +574,181 @@ body {
   padding-left: 15px;
   width: 100%;
 }
-/* line 26, scss/sucss/components/_grid.scss */
+/* line 27, scss/sucss/components/_grid.scss */
 [class*="col-"] + [class*="col-"]:last-child {
   float: right;
 }
+/* line 31, scss/sucss/components/_grid.scss */
+[class*="col-"] .row {
+  margin-right: -15px;
+  margin-left: -15px;
+  width: auto;
+}
 
 @media only screen {
-  /* line 33, scss/sucss/components/_grid.scss */
+  /* line 40, scss/sucss/components/_grid.scss */
   .col-1 {
     width: 8.33333%;
   }
 
-  /* line 33, scss/sucss/components/_grid.scss */
+  /* line 40, scss/sucss/components/_grid.scss */
   .col-2 {
     width: 16.66667%;
   }
 
-  /* line 33, scss/sucss/components/_grid.scss */
+  /* line 40, scss/sucss/components/_grid.scss */
   .col-3 {
     width: 25%;
   }
 
-  /* line 33, scss/sucss/components/_grid.scss */
+  /* line 40, scss/sucss/components/_grid.scss */
   .col-4 {
     width: 33.33333%;
   }
 
-  /* line 33, scss/sucss/components/_grid.scss */
+  /* line 40, scss/sucss/components/_grid.scss */
   .col-5 {
     width: 41.66667%;
   }
 
-  /* line 33, scss/sucss/components/_grid.scss */
+  /* line 40, scss/sucss/components/_grid.scss */
   .col-6 {
     width: 50%;
   }
 
-  /* line 33, scss/sucss/components/_grid.scss */
+  /* line 40, scss/sucss/components/_grid.scss */
   .col-7 {
     width: 58.33333%;
   }
 
-  /* line 33, scss/sucss/components/_grid.scss */
+  /* line 40, scss/sucss/components/_grid.scss */
   .col-8 {
     width: 66.66667%;
   }
 
-  /* line 33, scss/sucss/components/_grid.scss */
+  /* line 40, scss/sucss/components/_grid.scss */
   .col-9 {
     width: 75%;
   }
 
-  /* line 33, scss/sucss/components/_grid.scss */
+  /* line 40, scss/sucss/components/_grid.scss */
   .col-10 {
     width: 83.33333%;
   }
 
-  /* line 33, scss/sucss/components/_grid.scss */
+  /* line 40, scss/sucss/components/_grid.scss */
   .col-11 {
     width: 91.66667%;
   }
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 41, scss/sucss/components/_grid.scss */
+  /* line 48, scss/sucss/components/_grid.scss */
   .col-m-1 {
     width: 8.33333%;
   }
 
-  /* line 41, scss/sucss/components/_grid.scss */
+  /* line 48, scss/sucss/components/_grid.scss */
   .col-m-2 {
     width: 16.66667%;
   }
 
-  /* line 41, scss/sucss/components/_grid.scss */
+  /* line 48, scss/sucss/components/_grid.scss */
   .col-m-3 {
     width: 25%;
   }
 
-  /* line 41, scss/sucss/components/_grid.scss */
+  /* line 48, scss/sucss/components/_grid.scss */
   .col-m-4 {
     width: 33.33333%;
   }
 
-  /* line 41, scss/sucss/components/_grid.scss */
+  /* line 48, scss/sucss/components/_grid.scss */
   .col-m-5 {
     width: 41.66667%;
   }
 
-  /* line 41, scss/sucss/components/_grid.scss */
+  /* line 48, scss/sucss/components/_grid.scss */
   .col-m-6 {
     width: 50%;
   }
 
-  /* line 41, scss/sucss/components/_grid.scss */
+  /* line 48, scss/sucss/components/_grid.scss */
   .col-m-7 {
     width: 58.33333%;
   }
 
-  /* line 41, scss/sucss/components/_grid.scss */
+  /* line 48, scss/sucss/components/_grid.scss */
   .col-m-8 {
     width: 66.66667%;
   }
 
-  /* line 41, scss/sucss/components/_grid.scss */
+  /* line 48, scss/sucss/components/_grid.scss */
   .col-m-9 {
     width: 75%;
   }
 
-  /* line 41, scss/sucss/components/_grid.scss */
+  /* line 48, scss/sucss/components/_grid.scss */
   .col-m-10 {
     width: 83.33333%;
   }
 
-  /* line 41, scss/sucss/components/_grid.scss */
+  /* line 48, scss/sucss/components/_grid.scss */
   .col-m-11 {
     width: 91.66667%;
   }
 }
 @media only screen and (min-width: 64.0625em) {
-  /* line 49, scss/sucss/components/_grid.scss */
+  /* line 56, scss/sucss/components/_grid.scss */
   .col-l-1 {
     width: 8.33333%;
   }
 
-  /* line 49, scss/sucss/components/_grid.scss */
+  /* line 56, scss/sucss/components/_grid.scss */
   .col-l-2 {
     width: 16.66667%;
   }
 
-  /* line 49, scss/sucss/components/_grid.scss */
+  /* line 56, scss/sucss/components/_grid.scss */
   .col-l-3 {
     width: 25%;
   }
 
-  /* line 49, scss/sucss/components/_grid.scss */
+  /* line 56, scss/sucss/components/_grid.scss */
   .col-l-4 {
     width: 33.33333%;
   }
 
-  /* line 49, scss/sucss/components/_grid.scss */
+  /* line 56, scss/sucss/components/_grid.scss */
   .col-l-5 {
     width: 41.66667%;
   }
 
-  /* line 49, scss/sucss/components/_grid.scss */
+  /* line 56, scss/sucss/components/_grid.scss */
   .col-l-6 {
     width: 50%;
   }
 
-  /* line 49, scss/sucss/components/_grid.scss */
+  /* line 56, scss/sucss/components/_grid.scss */
   .col-l-7 {
     width: 58.33333%;
   }
 
-  /* line 49, scss/sucss/components/_grid.scss */
+  /* line 56, scss/sucss/components/_grid.scss */
   .col-l-8 {
     width: 66.66667%;
   }
 
-  /* line 49, scss/sucss/components/_grid.scss */
+  /* line 56, scss/sucss/components/_grid.scss */
   .col-l-9 {
     width: 75%;
   }
 
-  /* line 49, scss/sucss/components/_grid.scss */
+  /* line 56, scss/sucss/components/_grid.scss */
   .col-l-10 {
     width: 83.33333%;
   }
 
-  /* line 49, scss/sucss/components/_grid.scss */
+  /* line 56, scss/sucss/components/_grid.scss */
   .col-l-11 {
     width: 91.66667%;
   }
@@ -744,38 +767,38 @@ h6, .h6 {
 }
 
 /* line 12, scss/sucss/components/_type.scss */
-h1, .hn {
+h1, .h1 {
   font-size: 2.25em;
 }
 
 /* line 12, scss/sucss/components/_type.scss */
-h2, .hn {
+h2, .h2 {
   font-size: 2em;
 }
 
 /* line 12, scss/sucss/components/_type.scss */
-h3, .hn {
+h3, .h3 {
   font-size: 1.75em;
 }
 
 /* line 12, scss/sucss/components/_type.scss */
-h4, .hn {
+h4, .h4 {
   font-size: 1.5em;
 }
 
 /* line 12, scss/sucss/components/_type.scss */
-h5, .hn {
+h5, .h5 {
   font-size: 1.25em;
 }
 
 /* line 12, scss/sucss/components/_type.scss */
-h6, .hn {
+h6, .h6 {
   font-size: 1em;
 }
 
 /* line 6, scss/style.scss */
 .row {
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: white;
 }
 
 /* line 10, scss/style.scss */

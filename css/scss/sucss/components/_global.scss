@@ -95,6 +95,23 @@ body {
 	display: none;
 }
 
+img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	.ie6 &,
+	.ie7 &,
+	.ie8 & {
+		width: inherit;
+	}
+}
+
+img { -ms-interpolation-mode: bicubic; }
+
+//
+// Collapse utility classes
+//
 @include media {
 	.s-collapse {
 		padding-right: 0 !important;

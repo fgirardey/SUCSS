@@ -9,7 +9,7 @@ $header-font-style: normal !default;
 //
 @mixin hn( $hn: false ) {
 	@if $hn {
-		#{$hn}, .#{hn} {
+		#{$hn}, .#{$hn} {
 			@content;
 		}
 	} @else {
