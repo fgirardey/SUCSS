@@ -1,0 +1,137 @@
+
+$body-bg: #fff !default;
+$body-font-family: sans-serif !default;
+$body-font-size: 1em !default;
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+@mixin clearfix() {
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+//
+// Media Query range
+//
+
+$screen: "only screen" !default;
+
+$small-range: (0, 40em) !default;
+$medium-range: (40.0625em, 64em) !default;
+$large-range: (64.0625em, 90em) !default;
+
+$small-up: "#{$screen}" !default;
+$small-only: "#{$screen} and (min-width: #{nth($small-range, 1)}) and (max-width: #{nth($small-range, 2)})" !default;
+$medium-up: "#{$screen} and (min-width: #{nth($medium-range, 1)})" !default;
+$medium-only: "#{$screen} and (min-width: #{nth($medium-range, 1)}) and (max-width: #{nth($medium-range, 2)})" !default;
+$large-up: "#{$screen} and (min-width: #{nth($large-range, 1)})" !default;
+$large-only: "#{$screen} and (min-width: #{nth($large-range, 1)}) and (max-width: #{nth($large-range, 2)})" !default;
+
+//
+// Media query mixin
+//
+@mixin media( $size: false ) {
+	@if $size == large-up {
+		@media #{$large-up} {
+			@content;
+		}
+	} @else if $size == large-only {
+		@media #{$large-only} {
+			@content;
+		}
+	}  @else if $size == medium-up {
+		@media #{$medium-up} {
+			@content;
+		}
+	} @else if $size == medium-only {
+		@media #{$medium-only} {
+			@content;
+		}
+	} @else if $size == small-up {
+		@media #{$small-up} {
+			@content;
+		}
+	} @else if $size == small-only {
+		@media #{$small-only} {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+	
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	background: $body-bg;
+	font-size: $body-font-size;
+	font-family: $body-font-family;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clearfix {
+	@include clearfix();
+}
+
+.hide {
+	display: none;
+}
+
+@include media {
+	.s-collapse {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
+
+	.s-collapse-left {
+		padding-left: 0 !important;
+	}
+
+	.s-collapse-right {
+		padding-right: 0 !important;
+	}
+}
+
+@include media(medium-up) {
+	.m-collapse {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
+	.m-collapse-left {
+		padding-left: 0 !important;
+	}
+	.m-collapse-right {
+		padding-right: 0 !important;
+	}
+}
+
+@include media(large-up) {
+	.l-collapse {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
+	.l-collapse-left {
+		padding-left: 0 !important;
+	}
+	.l-collapse-right {
+		padding-right: 0 !important;
+	}
+}

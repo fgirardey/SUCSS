@@ -1,0 +1,40 @@
+
+$header-font-color: #000 !default;
+$header-font-family: sans-serif !default;
+$header-font-weight: bold !default;
+$header-font-style: normal !default;
+
+//
+// This mixin output an hn, .hn style.
+//
+@mixin hn( $hn: false ) {
+	@if $hn {
+		#{$hn}, .#{hn} {
+			@content;
+		}
+	} @else {
+		h1, .h1,
+		h2, .h2,
+		h3, .h3,
+		h4, .h4,
+		h5, .h5,
+		h6, .h6 {
+			@content;
+		}
+	}
+}
+
+@include hn {
+	color: $header-font-color;
+	font-weight: $header-font-weight;
+	font-style: $header-font-style;
+	font-family: $header-font-family;
+}
+
+
+@include hn( h1 ) { font-size: 2.25em; }
+@include hn( h2 ) { font-size: 2em; }
+@include hn( h3 ) { font-size: 1.75em; }
+@include hn( h4 ) { font-size: 1.5em; }
+@include hn( h5 ) { font-size: 1.25em; }
+@include hn( h6 ) { font-size: 1em; }

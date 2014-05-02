@@ -1,0 +1,53 @@
+$row-width: 1200px !default;
+$column-gutter: 30px !default;
+
+$total-columns: 12 !default;
+
+.row {
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	max-width: $row-width;
+	width: 100%;
+	@include clearfix();
+}
+
+@function grid-calc( $i, $columns: $total-columns ) {
+	@return percentage( $i / $columns );
+}
+
+[class*="col-"] {
+	position: relative;
+	float: left;
+	padding-right: $column-gutter / 2;
+	padding-left: $column-gutter / 2;
+	width: 100%;
+	& + &:last-child {
+		float: right;
+	}
+}
+
+@include media(small-up) {
+	@for $i from 1 through $total-columns - 1 {
+		.col-#{$i} {
+			width: grid-calc($i);
+		}
+	}
+}
+
+@include media(medium-up) {
+	@for $i from 1 through $total-columns - 1 {
+		.col-m-#{$i} {
+			width: grid-calc($i);
+		}
+	}
+}
+
+@include media(large-up) {
+	@for $i from 1 through $total-columns - 1 {
+		.col-l-#{$i} {
+			width: grid-calc($i);
+		}
+	}
+}
