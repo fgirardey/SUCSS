@@ -433,115 +433,124 @@ th {
   padding: 0;
 }
 
-/* line 6, scss/sucss/components/_global.scss */
+/* line 20, scss/sucss/components/_global.scss */
 *, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 72, scss/sucss/components/_global.scss */
+/* line 35, scss/sucss/components/_global.scss */
+html, body {
+  overflow-x: hidden;
+}
+
+/* line 39, scss/sucss/components/_global.scss */
 html {
   font-size: 100%;
 }
 
-/* line 76, scss/sucss/components/_global.scss */
+/* line 43, scss/sucss/components/_global.scss */
 body {
   background: white;
   font-size: 1em;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
-/* line 82, scss/sucss/components/_global.scss */
-.left {
+/* line 49, scss/sucss/components/_global.scss */
+.left, .alignleft {
   float: left !important;
 }
 
-/* line 84, scss/sucss/components/_global.scss */
-.right {
+/* line 51, scss/sucss/components/_global.scss */
+.right, .alignright {
   float: right !important;
 }
 
-/* line 86, scss/sucss/components/_global.scss */
+/* line 53, scss/sucss/components/_global.scss */
 .clearfix {
   *zoom: 1;
 }
-/* line 12, scss/sucss/components/_global.scss */
+/* line 6, scss/sucss/components/_global.scss */
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;
 }
-/* line 16, scss/sucss/components/_global.scss */
+/* line 10, scss/sucss/components/_global.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 90, scss/sucss/components/_global.scss */
+/* line 55, scss/sucss/components/_global.scss */
 .hide {
   display: none;
 }
 
-/* line 94, scss/sucss/components/_global.scss */
+/* line 57, scss/sucss/components/_global.scss */
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 59, scss/sucss/components/_global.scss */
 img {
   display: inline-block;
   max-width: 100%;
   height: auto;
   vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
 }
-/* line 99, scss/sucss/components/_global.scss */
+/* line 65, scss/sucss/components/_global.scss */
 .ie6 img, .ie7 img, .ie8 img {
   width: inherit;
 }
 
-/* line 106, scss/sucss/components/_global.scss */
-img {
-  -ms-interpolation-mode: bicubic;
-}
-
-/* line 112, scss/sucss/components/_global.scss */
+/* line 74, scss/sucss/components/_global.scss */
 .s-collapse {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
 
-/* line 117, scss/sucss/components/_global.scss */
+/* line 79, scss/sucss/components/_global.scss */
 .s-collapse-left {
   padding-left: 0 !important;
 }
 
-/* line 121, scss/sucss/components/_global.scss */
+/* line 83, scss/sucss/components/_global.scss */
 .s-collapse-right {
   padding-right: 0 !important;
 }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 127, scss/sucss/components/_global.scss */
+  /* line 89, scss/sucss/components/_global.scss */
   .m-collapse {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
 
-  /* line 131, scss/sucss/components/_global.scss */
+  /* line 93, scss/sucss/components/_global.scss */
   .m-collapse-left {
     padding-left: 0 !important;
   }
 
-  /* line 134, scss/sucss/components/_global.scss */
+  /* line 96, scss/sucss/components/_global.scss */
   .m-collapse-right {
     padding-right: 0 !important;
   }
 }
 @media only screen and (min-width: 64.0625em) {
-  /* line 140, scss/sucss/components/_global.scss */
+  /* line 102, scss/sucss/components/_global.scss */
   .l-collapse {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
 
-  /* line 144, scss/sucss/components/_global.scss */
+  /* line 106, scss/sucss/components/_global.scss */
   .l-collapse-left {
     padding-left: 0 !important;
   }
 
-  /* line 147, scss/sucss/components/_global.scss */
+  /* line 109, scss/sucss/components/_global.scss */
   .l-collapse-right {
     padding-right: 0 !important;
   }
@@ -556,17 +565,35 @@ img {
   width: 100%;
   *zoom: 1;
 }
-/* line 12, scss/sucss/components/_global.scss */
+/* line 6, scss/sucss/components/_global.scss */
 .row:before, .row:after {
   content: " ";
   display: table;
 }
-/* line 16, scss/sucss/components/_global.scss */
+/* line 10, scss/sucss/components/_global.scss */
 .row:after {
   clear: both;
 }
 
-/* line 20, scss/sucss/components/_grid.scss */
+/* line 16, scss/sucss/components/_grid.scss */
+.row [class*="col-"] .row {
+  width: auto;
+  max-width: none;
+  margin-right: -15px;
+  margin-left: -15px;
+  *zoom: 1;
+}
+/* line 6, scss/sucss/components/_global.scss */
+.row [class*="col-"] .row:before, .row [class*="col-"] .row:after {
+  content: " ";
+  display: table;
+}
+/* line 10, scss/sucss/components/_global.scss */
+.row [class*="col-"] .row:after {
+  clear: both;
+}
+
+/* line 28, scss/sucss/components/_grid.scss */
 [class*="col-"] {
   position: relative;
   float: left;
@@ -574,226 +601,295 @@ img {
   padding-left: 15px;
   width: 100%;
 }
-/* line 26, scss/sucss/components/_grid.scss */
+/* line 34, scss/sucss/components/_grid.scss */
 [class*="col-"] + [class*="col-"]:last-child {
   float: right;
 }
-/* line 29, scss/sucss/components/_grid.scss */
-[class*="col-"] .row {
-  margin-right: -15px;
-  margin-left: -15px;
-  width: auto;
+
+/* line 39, scss/sucss/components/_grid.scss */
+.full-width {
+  position: relative;
+  background: inherit;
+}
+/* line 42, scss/sucss/components/_grid.scss */
+.full-width:before, .full-width:after {
+  content: "\00a0" !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 9999px;
+  background: inherit;
+}
+/* line 50, scss/sucss/components/_grid.scss */
+.full-width:before {
+  right: 100%;
+}
+/* line 53, scss/sucss/components/_grid.scss */
+.full-width:after {
+  left: 100%;
 }
 
-@media only screen {
-  /* line 38, scss/sucss/components/_grid.scss */
-  .col-1 {
-    width: 8.33333%;
-  }
-
-  /* line 38, scss/sucss/components/_grid.scss */
-  .col-2 {
-    width: 16.66667%;
-  }
-
-  /* line 38, scss/sucss/components/_grid.scss */
-  .col-3 {
-    width: 25%;
-  }
-
-  /* line 38, scss/sucss/components/_grid.scss */
-  .col-4 {
-    width: 33.33333%;
-  }
-
-  /* line 38, scss/sucss/components/_grid.scss */
-  .col-5 {
-    width: 41.66667%;
-  }
-
-  /* line 38, scss/sucss/components/_grid.scss */
-  .col-6 {
-    width: 50%;
-  }
-
-  /* line 38, scss/sucss/components/_grid.scss */
-  .col-7 {
-    width: 58.33333%;
-  }
-
-  /* line 38, scss/sucss/components/_grid.scss */
-  .col-8 {
-    width: 66.66667%;
-  }
-
-  /* line 38, scss/sucss/components/_grid.scss */
-  .col-9 {
-    width: 75%;
-  }
-
-  /* line 38, scss/sucss/components/_grid.scss */
-  .col-10 {
-    width: 83.33333%;
-  }
-
-  /* line 38, scss/sucss/components/_grid.scss */
-  .col-11 {
-    width: 91.66667%;
-  }
+/* line 59, scss/sucss/components/_grid.scss */
+.col-1 {
+  width: 8.33333%;
 }
+
+/* line 59, scss/sucss/components/_grid.scss */
+.col-2 {
+  width: 16.66667%;
+}
+
+/* line 59, scss/sucss/components/_grid.scss */
+.col-3 {
+  width: 25%;
+}
+
+/* line 59, scss/sucss/components/_grid.scss */
+.col-4 {
+  width: 33.33333%;
+}
+
+/* line 59, scss/sucss/components/_grid.scss */
+.col-5 {
+  width: 41.66667%;
+}
+
+/* line 59, scss/sucss/components/_grid.scss */
+.col-6 {
+  width: 50%;
+}
+
+/* line 59, scss/sucss/components/_grid.scss */
+.col-7 {
+  width: 58.33333%;
+}
+
+/* line 59, scss/sucss/components/_grid.scss */
+.col-8 {
+  width: 66.66667%;
+}
+
+/* line 59, scss/sucss/components/_grid.scss */
+.col-9 {
+  width: 75%;
+}
+
+/* line 59, scss/sucss/components/_grid.scss */
+.col-10 {
+  width: 83.33333%;
+}
+
+/* line 59, scss/sucss/components/_grid.scss */
+.col-11 {
+  width: 91.66667%;
+}
+
 @media only screen and (min-width: 40.0625em) {
-  /* line 46, scss/sucss/components/_grid.scss */
+  /* line 66, scss/sucss/components/_grid.scss */
   .col-m-1 {
     width: 8.33333%;
   }
 
-  /* line 46, scss/sucss/components/_grid.scss */
+  /* line 66, scss/sucss/components/_grid.scss */
   .col-m-2 {
     width: 16.66667%;
   }
 
-  /* line 46, scss/sucss/components/_grid.scss */
+  /* line 66, scss/sucss/components/_grid.scss */
   .col-m-3 {
     width: 25%;
   }
 
-  /* line 46, scss/sucss/components/_grid.scss */
+  /* line 66, scss/sucss/components/_grid.scss */
   .col-m-4 {
     width: 33.33333%;
   }
 
-  /* line 46, scss/sucss/components/_grid.scss */
+  /* line 66, scss/sucss/components/_grid.scss */
   .col-m-5 {
     width: 41.66667%;
   }
 
-  /* line 46, scss/sucss/components/_grid.scss */
+  /* line 66, scss/sucss/components/_grid.scss */
   .col-m-6 {
     width: 50%;
   }
 
-  /* line 46, scss/sucss/components/_grid.scss */
+  /* line 66, scss/sucss/components/_grid.scss */
   .col-m-7 {
     width: 58.33333%;
   }
 
-  /* line 46, scss/sucss/components/_grid.scss */
+  /* line 66, scss/sucss/components/_grid.scss */
   .col-m-8 {
     width: 66.66667%;
   }
 
-  /* line 46, scss/sucss/components/_grid.scss */
+  /* line 66, scss/sucss/components/_grid.scss */
   .col-m-9 {
     width: 75%;
   }
 
-  /* line 46, scss/sucss/components/_grid.scss */
+  /* line 66, scss/sucss/components/_grid.scss */
   .col-m-10 {
     width: 83.33333%;
   }
 
-  /* line 46, scss/sucss/components/_grid.scss */
+  /* line 66, scss/sucss/components/_grid.scss */
   .col-m-11 {
     width: 91.66667%;
   }
 }
 @media only screen and (min-width: 64.0625em) {
-  /* line 54, scss/sucss/components/_grid.scss */
+  /* line 74, scss/sucss/components/_grid.scss */
   .col-l-1 {
     width: 8.33333%;
   }
 
-  /* line 54, scss/sucss/components/_grid.scss */
+  /* line 74, scss/sucss/components/_grid.scss */
   .col-l-2 {
     width: 16.66667%;
   }
 
-  /* line 54, scss/sucss/components/_grid.scss */
+  /* line 74, scss/sucss/components/_grid.scss */
   .col-l-3 {
     width: 25%;
   }
 
-  /* line 54, scss/sucss/components/_grid.scss */
+  /* line 74, scss/sucss/components/_grid.scss */
   .col-l-4 {
     width: 33.33333%;
   }
 
-  /* line 54, scss/sucss/components/_grid.scss */
+  /* line 74, scss/sucss/components/_grid.scss */
   .col-l-5 {
     width: 41.66667%;
   }
 
-  /* line 54, scss/sucss/components/_grid.scss */
+  /* line 74, scss/sucss/components/_grid.scss */
   .col-l-6 {
     width: 50%;
   }
 
-  /* line 54, scss/sucss/components/_grid.scss */
+  /* line 74, scss/sucss/components/_grid.scss */
   .col-l-7 {
     width: 58.33333%;
   }
 
-  /* line 54, scss/sucss/components/_grid.scss */
+  /* line 74, scss/sucss/components/_grid.scss */
   .col-l-8 {
     width: 66.66667%;
   }
 
-  /* line 54, scss/sucss/components/_grid.scss */
+  /* line 74, scss/sucss/components/_grid.scss */
   .col-l-9 {
     width: 75%;
   }
 
-  /* line 54, scss/sucss/components/_grid.scss */
+  /* line 74, scss/sucss/components/_grid.scss */
   .col-l-10 {
     width: 83.33333%;
   }
 
-  /* line 54, scss/sucss/components/_grid.scss */
+  /* line 74, scss/sucss/components/_grid.scss */
   .col-l-11 {
     width: 91.66667%;
   }
 }
-/* line 16, scss/sucss/components/_type.scss */
+/* line 11, scss/sucss/components/_type.scss */
 h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
+  margin: 16px 0;
+  margin: 1rem 0;
   color: black;
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 50, scss/sucss/components/_type.scss */
+h1 a, .h1 a,
+h2 a, .h2 a,
+h3 a, .h3 a,
+h4 a, .h4 a,
+h5 a, .h5 a,
+h6 a, .h6 a {
+  color: inherit;
+}
+/* line 53, scss/sucss/components/_type.scss */
+h1 small, .h1 small,
+h2 small, .h2 small,
+h3 small, .h3 small,
+h4 small, .h4 small,
+h5 small, .h5 small,
+h6 small, .h6 small {
+  font-size: 0.6em;
 }
 
-/* line 12, scss/sucss/components/_type.scss */
+/* line 7, scss/sucss/components/_type.scss */
 h1, .h1 {
+  font-size: 2.5em;
+}
+
+/* line 7, scss/sucss/components/_type.scss */
+h2, .h2 {
   font-size: 2.25em;
 }
 
-/* line 12, scss/sucss/components/_type.scss */
-h2, .h2 {
+/* line 7, scss/sucss/components/_type.scss */
+h3, .h3 {
   font-size: 2em;
 }
 
-/* line 12, scss/sucss/components/_type.scss */
-h3, .h3 {
+/* line 7, scss/sucss/components/_type.scss */
+h4, .h4 {
   font-size: 1.75em;
 }
 
-/* line 12, scss/sucss/components/_type.scss */
-h4, .h4 {
+/* line 7, scss/sucss/components/_type.scss */
+h5, .h5 {
   font-size: 1.5em;
 }
 
-/* line 12, scss/sucss/components/_type.scss */
-h5, .h5 {
+/* line 7, scss/sucss/components/_type.scss */
+h6, .h6 {
   font-size: 1.25em;
 }
 
-/* line 12, scss/sucss/components/_type.scss */
-h6, .h6 {
-  font-size: 1em;
+/* line 69, scss/sucss/components/_type.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 70, scss/sucss/components/_type.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 71, scss/sucss/components/_type.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 73, scss/sucss/components/_type.scss */
+small {
+  font-size: 0.8em;
+}
+
+/* line 76, scss/sucss/components/_type.scss */
+blockquote p:first-child:first-letter {
+  float: left;
+  color: #3498db;
+  font-size: 3em;
+  line-height: 1;
+  margin-right: 0.1em;
 }
 
 /* line 6, scss/style.scss */
@@ -802,13 +898,14 @@ h6, .h6 {
   text-align: center;
   font-size: 1.25em;
 }
-/* line 10, scss/style.scss */
-.row.wrapper [class*="col-"] {
-  background-color: #ffbfbf;
+
+/* line 12, scss/style.scss */
+.inner {
+  background-color: #3498db;
 }
 
-/* line 15, scss/style.scss */
-.inner {
-  background-color: #f00;
-  height: 150px;
+/* line 16, scss/style.scss */
+.full-width {
+  background-color: #3498db;
+  color: #fff;
 }

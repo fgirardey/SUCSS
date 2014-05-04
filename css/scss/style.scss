@@ -7,12 +7,13 @@
 	color: #fff;
 	text-align: center;
 	font-size: 1.25em;
-	[class*="col-"] {
-		background-color: lighten(#f00, 37.5%);
-	}
 }
 
 .inner {
-	background-color: #f00;
-	height: 150px;
+	background-color: $primary-color;
+}
+
+.full-width {
+	background-color: $primary-color;
+	color: #fff;
 }

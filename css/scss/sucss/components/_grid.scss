@@ -13,6 +13,14 @@ $total-columns: 12 !default;
 	@include clearfix();
 }
 
+.row [class*="col-"] .row {
+	width: auto;
+	max-width: none;
+	margin-right: ( $column-gutter / 2 ) * -1;
+	margin-left: ( $column-gutter / 2 ) * -1;
+	@include clearfix();
+}
+
 @function grid-calc( $i, $columns: $total-columns ) {
 	@return percentage( $i / $columns );
 }
@@ -26,18 +34,30 @@ $total-columns: 12 !default;
 	& + &:last-child {
 		float: right;
 	}
-	.row {
-		margin-right: ( $column-gutter / 2 ) * -1;
-		margin-left: ( $column-gutter / 2 ) * -1;
-		width: auto;
+}
+
+.full-width {
+	position: relative;
+	background: inherit;
+	&:before, &:after {
+		content: "\00a0" !important;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 9999px;
+		background: inherit;
+	}
+	&:before {
+		right: 100%;
+	}
+	&:after {
+		left: 100%;
 	}
 }
 
-@include media(small-up) {
-	@for $i from 1 through $total-columns - 1 {
-		.col-#{$i} {
-			width: grid-calc($i);
-		}
+@for $i from 1 through $total-columns - 1 {
+	.col-#{$i} {
+		width: grid-calc($i);
 	}
 }
 

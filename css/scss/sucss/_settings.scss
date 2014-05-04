@@ -6,7 +6,61 @@
 //   |_____/ \____/ \_____|_____/_____/ 
 //    
 
+
+//
+// Grid System
+//
 // $row-width: 1200px !default;
 // $column-gutter: 30px !default;
 
 // $total-columns: 12 !default;
+// $rem-base: 16px !default;
+
+
+//
+// Media Query
+//
+// $screen: "only screen" !default;
+
+// $small-range: (0, 40em) !default;
+// $medium-range: (40.0625em, 64em) !default;
+// $large-range: (64.0625em, 90em) !default;
+
+// $small-up: "#{$screen}" !default;
+// $small-only: "#{$screen} and (min-width: #{nth($small-range, 1)}) and (max-width: #{nth($small-range, 2)})" !default;
+// $medium-up: "#{$screen} and (min-width: #{nth($medium-range, 1)})" !default;
+// $medium-only: "#{$screen} and (min-width: #{nth($medium-range, 1)}) and (max-width: #{nth($medium-range, 2)})" !default;
+// $large-up: "#{$screen} and (min-width: #{nth($large-range, 1)})" !default;
+// $large-only: "#{$screen} and (min-width: #{nth($large-range, 1)}) and (max-width: #{nth($large-range, 2)})" !default;
+
+
+@import "functions";
+
+
+//
+// Global Styles
+//
+// $body-bg: #fff !default;
+// $body-font-family: "Open Sans", sans-serif !default;
+// $body-font-size: 16px !default;
+
+// $primary-color: #3498db !default;
+
+
+//
+// Header Styles
+//
+// $header-margin-vertical: $rem-base !default;
+// $header-font-color: #000 !default;
+// $header-font-weight: 500 !default;
+// $header-font-style: normal !default;
+// $header-font-family: $body-font-family !default;
+// $header-line-height: 1.25em !default;
+// $header-text-rendering: optimizeLegibility !default;
+
+// $h1-font-size: 2.5em;
+// $h2-font-size: 2.25em;
+// $h3-font-size: 2em;
+// $h4-font-size: 1.75em;
+// $h5-font-size: 1.5em;
+// $h6-font-size: 1.25em;

@@ -1,0 +1,59 @@
+$rem-base: 16px !default;
+
+@function strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}
+
+@function rem-calc( $value, $remBase: $rem-base ) {
+	@return strip-unit( $remBase / $value ) * 1rem;
+}
+
+//
+// Media Query
+//
+$screen: "only screen" !default;
+
+$small-range: (0, 40em) !default;
+$medium-range: (40.0625em, 64em) !default;
+$large-range: (64.0625em, 90em) !default;
+
+$small-up: "#{$screen}" !default;
+$small-only: "#{$screen} and (min-width: #{nth($small-range, 1)}) and (max-width: #{nth($small-range, 2)})" !default;
+$medium-up: "#{$screen} and (min-width: #{nth($medium-range, 1)})" !default;
+$medium-only: "#{$screen} and (min-width: #{nth($medium-range, 1)}) and (max-width: #{nth($medium-range, 2)})" !default;
+$large-up: "#{$screen} and (min-width: #{nth($large-range, 1)})" !default;
+$large-only: "#{$screen} and (min-width: #{nth($large-range, 1)}) and (max-width: #{nth($large-range, 2)})" !default;
+
+//
+// Media query mixin
+//
+@mixin media( $size: false ) {
+	@if $size == large-up {
+		@media #{$large-up} {
+			@content;
+		}
+	} @else if $size == large-only {
+		@media #{$large-only} {
+			@content;
+		}
+	}  @else if $size == medium-up {
+		@media #{$medium-up} {
+			@content;
+		}
+	} @else if $size == medium-only {
+		@media #{$medium-only} {
+			@content;
+		}
+	} @else if $size == small-up {
+		@media #{$small-up} {
+			@content;
+		}
+	} @else if $size == small-only {
+		@media #{$small-only} {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+	
+}
