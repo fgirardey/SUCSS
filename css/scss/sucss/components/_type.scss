@@ -1,7 +1,78 @@
 
 //
-// This mixin output an hn, .hn style.
+// Type reset
 //
+div,
+dl, dt, dd,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+pre,
+form,
+p, blockquote,
+th, td {
+	margin: 0;
+	padding: 0;
+}
+
+//
+// Type utility Classes
+//
+$small-font-size: 0.8em !default;
+
+$address-font-style: normal !default;
+$address-font-size: 1em !default;
+$address-margin-bottom: 1em !default;
+
+$abbr-border-bottom: 1px dotted !default;
+
+$mark-font-color: #ffa !default;
+$mark-padding: 0 0.1em !default;
+
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+
+small, .small { font-size: $small-font-size; }
+
+address {
+	font-style: $address-font-style;
+	font-size: $address-font-size;
+	margin-bottom: $address-margin-bottom;
+}
+
+abbr[title] {
+	border-bottom: $abbr-border-bottom;
+	border-bottom-color: initial;
+	cursor: help;
+}
+
+mark {
+	padding: $mark-padding;
+	background: $mark-font-color;
+}
+
+
+
+//
+// Header Styles
+//
+$header-margin-vertical: $rem-base !default;
+$header-font-color: inherit !default;
+$header-font-weight: 600 !default;
+$header-font-style: normal !default;
+$header-font-family: inherit !default;
+$header-line-height: 1.25 !default;
+$header-text-rendering: optimizeLegibility !default;
+
+$h1-font-size: 2.5em !default;
+$h2-font-size: 2.25em !default;
+$h3-font-size: 2em !default;
+$h4-font-size: 1.75em !default;
+$h5-font-size: 1.5em !default;
+$h6-font-size: 1.25em !default;
+
+// This mixin output an hn, .hn style.
 @mixin hn( $hn: false ) {
 	@if $hn {
 		#{$hn}, .#{$hn} {
@@ -18,24 +89,6 @@
 		}
 	}
 }
-
-//
-// Header Styles
-//
-$header-margin-vertical: $rem-base !default;
-$header-font-color: #000 !default;
-$header-font-weight: 600 !default;
-$header-font-style: normal !default;
-$header-font-family: $body-font-family !default;
-$header-line-height: 1.25em !default;
-$header-text-rendering: optimizeLegibility !default;
-
-$h1-font-size: 2.5em;
-$h2-font-size: 2.25em;
-$h3-font-size: 2em;
-$h4-font-size: 1.75em;
-$h5-font-size: 1.5em;
-$h6-font-size: 1.25em;
 
 @include hn {
 	margin: $header-margin-vertical 0;
@@ -63,21 +116,78 @@ $h6-font-size: 1.25em;
 @include hn( h5 ) { font-size: $h5-font-size; }
 @include hn( h6 ) { font-size: $h6-font-size; }
 
-//
-// Type utility Classes
-//
-.text-right { text-align: right; }
-.text-left { text-align: left; }
-.text-center { text-align: center; }
 
-small { font-size: 0.8em; }
+
+//
+// Paragraph Style
+//
+$paragraph-margin-bottom: 1em !default;
+$paragraph-font-color: inherit !default;
+$paragraph-font-weight: normal !default;
+$paragraph-font-style: normal !default;
+$paragraph-font-size: 1em !default;
+$paragraph-font-family: inherit !default;
+$paragraph-line-height: 1.4 !default;
+$paragraph-text-rendering: optimizeLegibility !default;
+
+p {
+	margin-bottom: $paragraph-margin-bottom;
+	color: $paragraph-font-color;
+	font-weight: $paragraph-font-weight;
+	font-style: $paragraph-font-style;
+	font-size:  $paragraph-font-size;
+	font-family: $paragraph-font-family;
+	line-height: $paragraph-line-height;
+	text-rendering: $paragraph-text-rendering;
+}
+
+
+
+//
+// Blockquote Style
+//
+$blockquote-margin-bottom: 1em !default;
+$blockquote-padding: 0.5em 1em !default;
+$blockquote-border: 3px solid lighten( $primary-color, 40% ) !default;
+
+$blockquote-highlight-outline: 10px solid $primary-color !default;
+$blockquote-highlight-color: #fff !default;
+$blockquote-highlight-bg: $primary-color !default;
 
 blockquote {
-	p:first-child:first-letter {
-		float: left;
-		color: $primary-color;
-		font-size: 3em;
-		line-height: 1;
-		margin-right: 0.1em;
+	margin-bottom: $blockquote-margin-bottom;
+	padding: $blockquote-padding;
+	border-left: $blockquote-border;
+	p {
+		font-weight: inherit;
+		font-style: normal;
+		font-size: 1em;
+		font-family: inherit;
+		&:last-child { margin-bottom: 0; }
+	}
+	footer, p + cite {
+		font-style: normal;
+		color: darken($grey-color, 15%);
+	}
+	footer:before {
+		content: '\2014 \00A0';
+	}
+	.ie6 &, .ie7 &, .ie8 & {
+		p {	margin-bottom: 0; }
+		p + * { margin-top: $blockquote-margin-bottom; }
+		cite { display: inline-block; }
 	}
 }
+
+blockquote.blockquote--highlight {
+	outline: $blockquote-highlight-outline;
+	border-color: initial;
+	background: $blockquote-highlight-bg;
+	color: $blockquote-highlight-color;
+	font-weight: 600;
+	footer, p + cite {
+		color: $grey-color;
+	}
+	cite { font-weight: 400; }
+}
+

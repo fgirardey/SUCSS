@@ -55,5 +55,4 @@ $large-only: "#{$screen} and (min-width: #{nth($large-range, 1)}) and (max-width
 	} @else {
 		@content;
 	}
-	
 }

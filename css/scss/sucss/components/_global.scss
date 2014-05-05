@@ -1,36 +1,26 @@
 
 @import "../functions";
 
-@mixin clearfix() {
-	*zoom: 1;
-	&:before, &:after {
-		content: " ";
-		display: table;
-	}
-	&:after {
-		clear: both;
-	}
-}
 
-@mixin antialiased() {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+
+//
+// Global Styles
+//
+$body-bg: #fff !default;
+$body-font-color: #000 !default;
+$body-font-family: sans-serif !default;
+$body-font-size: 1em !default;
+$global-radius: 5px !default;
+
+// Colors
+$primary-color: #09f !default;
+$grey-color: #ccc !default;
 
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
-//
-// Global Styles
-//
-$body-bg: #fff !default;
-$body-font-family: "Open Sans", sans-serif !default;
-$body-font-size: 16px !default;
-
-$primary-color: #3498db !default;
 
 html, body {
 	overflow-x: hidden;
@@ -42,19 +32,15 @@ html {
 
 body {
 	background: $body-bg;
-	font-size: 1em;
+	color: $body-font-color;
+	font-size: $body-font-size;
 	font-family: $body-font-family;
 }
 
-.left, .alignleft {	float: left !important; }
 
 .right, .alignright { float: right !important; }
-
-.clearfix {	@include clearfix(); }
-
+.left, .alignleft {	float: left !important; }
 .hide {	display: none; }
-
-.antialiased { @include antialiased(); }
 
 img {
 	display: inline-block;
@@ -66,6 +52,35 @@ img {
 		width: inherit;
 	}
 }
+
+img.alignright { float: right !important; margin: 0 0 1em 1em; }
+img.alignleft { float: left !important; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+.radius { border-radius: $global-radius; }
+
+// This mixin output a clearfix for all browser
+@mixin clearfix() {
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// This mixin output an antialiased for Webkit and Mozilla on Mac
+@mixin antialiased() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.clearfix {	@include clearfix(); }
+.antialiased { @include antialiased(); }
+
+
 
 //
 // Collapse utility classes
