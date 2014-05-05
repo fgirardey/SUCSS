@@ -123,13 +123,13 @@
 			</div>
 			<div class="row wrapper">
 				<!-- (div.col-4>.inner>{col-4})*3 -->
-				<div class="col-l-4">
+				<div class="col-4">
 					<div class="inner">col-4</div>
 				</div>
-				<div class="col-l-4">
+				<div class="col-4">
 					<div class="inner">col-4</div>
 				</div>
-				<div class="col-l-4">
+				<div class="col-4">
 					<div class="inner">col-4</div>
 				</div>
 			</div>
