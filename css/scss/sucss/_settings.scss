@@ -7,6 +7,24 @@
 //    
 
 
+
+//
+// Global Styles
+//
+// $body-bg: #fff !default;
+// $body-font-color: #000 !default;
+// $body-font-family: sans-serif !default;
+// $body-font-size: 1em !default;
+// $global-radius: 5px !default;
+
+//
+// Colors
+//
+// $primary-color: #09f !default;
+// $grey-color: #ccc !default;
+
+
+
 //
 // Grid System
 //
@@ -14,8 +32,10 @@
 // $column-gutter: 30px !default;
 
 // $total-columns: 12 !default;
-// $rem-base: 16px !default;
 
+
+
+// $rem-base: 16px !default;
 
 //
 // Media Query
@@ -34,33 +54,68 @@
 // $large-only: "#{$screen} and (min-width: #{nth($large-range, 1)}) and (max-width: #{nth($large-range, 2)})" !default;
 
 
+
 @import "functions";
 
 
-//
-// Global Styles
-//
-// $body-bg: #fff !default;
-// $body-font-family: "Open Sans", sans-serif !default;
-// $body-font-size: 16px !default;
 
-// $primary-color: #3498db !default;
+//
+// Type utility Classes
+//
+// $small-font-size: 0.8em !default;
+
+// $address-font-style: normal !default;
+// $address-font-size: 1em !default;
+// $address-margin-bottom: 1em !default;
+
+// $abbr-border-bottom: 1px dotted !default;
+
+// $mark-font-color: #ffa !default;
+// $mark-padding: 0 0.1em !default;
+
 
 
 //
 // Header Styles
 //
 // $header-margin-vertical: $rem-base !default;
-// $header-font-color: #000 !default;
-// $header-font-weight: 500 !default;
+// $header-font-color: inherit !default;
+// $header-font-weight: 600 !default;
 // $header-font-style: normal !default;
-// $header-font-family: $body-font-family !default;
-// $header-line-height: 1.25em !default;
+// $header-font-family: inherit !default;
+// $header-line-height: 1.25 !default;
 // $header-text-rendering: optimizeLegibility !default;
 
-// $h1-font-size: 2.5em;
-// $h2-font-size: 2.25em;
-// $h3-font-size: 2em;
-// $h4-font-size: 1.75em;
-// $h5-font-size: 1.5em;
-// $h6-font-size: 1.25em;
+// $h1-font-size: 2.5em !default;
+// $h2-font-size: 2.25em !default;
+// $h3-font-size: 2em !default;
+// $h4-font-size: 1.75em !default;
+// $h5-font-size: 1.5em !default;
+// $h6-font-size: 1.25em !default;
+
+
+
+//
+// Paragraph Style
+//
+// $paragraph-margin-bottom: 1em !default;
+// $paragraph-font-color: inherit !default;
+// $paragraph-font-weight: normal !default;
+// $paragraph-font-style: normal !default;
+// $paragraph-font-size: 1em !default;
+// $paragraph-font-family: inherit !default;
+// $paragraph-line-height: 1.4 !default;
+// $paragraph-text-rendering: optimizeLegibility !default;
+
+
+
+//
+// Blockquote Style
+//
+// $blockquote-margin-bottom: 1em !default;
+// $blockquote-padding: 0.5em 1em !default;
+// $blockquote-border: 3px solid lighten( $primary-color, 40% ) !default;
+
+// $blockquote-highlight-outline: 10px solid $primary-color !default;
+// $blockquote-highlight-color: #fff !default;
+// $blockquote-highlight-bg: $primary-color !default;

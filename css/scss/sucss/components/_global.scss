@@ -10,9 +10,14 @@ $body-bg: #fff !default;
 $body-font-color: #000 !default;
 $body-font-family: sans-serif !default;
 $body-font-size: 1em !default;
-$global-radius: 5px !default;
 
+$global-radius: 5px !default;
+$global-monospace-font: Consolas, Monaco, "Andale Mono", monospace !default;
+$global-var-font-color: #C7254E !default;
+
+//
 // Colors
+//
 $primary-color: #09f !default;
 $grey-color: #ccc !default;
 

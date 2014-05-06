@@ -14,32 +14,50 @@ th, td {
 	padding: 0;
 }
 
+code, kbd, pre, samp {
+	font-family: $global-monospace-font;
+}
+
+
+
 //
 // Type utility Classes
 //
-$small-font-size: 0.8em !default;
-
-$address-font-style: normal !default;
-$address-font-size: 1em !default;
-$address-margin-bottom: 1em !default;
-
-$abbr-border-bottom: 1px dotted !default;
-
-$mark-font-color: #ffa !default;
-$mark-padding: 0 0.1em !default;
-
 .text-right { text-align: right; }
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-justify { text-align: justify; }
 
+
+
+
+//
+// Small
+//
+$small-font-size: 0.8em !default;
+
 small, .small { font-size: $small-font-size; }
 
+
+
+//
+// Address
+//
+$address-font-style: normal !default;
+$address-font-size: 1em !default;
+$address-margin-bottom: 1em !default;
 address {
 	font-style: $address-font-style;
 	font-size: $address-font-size;
 	margin-bottom: $address-margin-bottom;
 }
+
+
+
+//
+// Abbr
+//
+$abbr-border-bottom: 1px dotted !default;
 
 abbr[title] {
 	border-bottom: $abbr-border-bottom;
@@ -47,9 +65,64 @@ abbr[title] {
 	cursor: help;
 }
 
+
+
+//
+// Mark
+//
+$mark-bg: #ffa !default;
+$mark-padding: 0 0.1em !default;
+
 mark {
 	padding: $mark-padding;
-	background: $mark-font-color;
+	background: $mark-bg;
+}
+
+
+
+//
+// Kbd
+//
+$kbd-padding: 2px 4px !default;
+$kbd-font-size: 0.9em !default;
+$kbd-border-radius: $global-radius - 2px !default;
+$kbd-bg: #333 !default;
+$kbd-color: #fff !default;
+
+kbd {
+	padding: $kbd-padding;
+	font-size: $kbd-font-size;
+	border-radius: $kbd-border-radius;
+	background: $kbd-bg;
+	color: $kbd-color;
+}
+
+
+//
+// Code
+//
+$code-padding: 2px 4px !default;
+$code-border-radius: $global-radius - 2px !default;
+$code-bg: lighten($global-var-font-color, 51%) !default;
+$code-font-color: $global-var-font-color !default;
+$code-font-size: 0.9em !default;
+
+.ie6 code, .ie7 code, .ie8 code {
+	padding: $code-padding;
+	border-radius: $code-border-radius;
+	background: $code-bg;
+	color: $global-var-font-color;
+	white-space: nowrap;
+	font-size: $code-font-size;
+}
+
+code:not([class*="language-"]) {
+	padding: $code-padding;
+	border-radius: $code-border-radius;
+	background: $code-bg;
+	color: $global-var-font-color;
+	white-space: nowrap;
+	font-size: $code-font-size;
 }
 
 
@@ -92,7 +165,6 @@ $h6-font-size: 1.25em !default;
 
 @include hn {
 	margin: $header-margin-vertical 0;
-	margin: rem-calc($header-margin-vertical) 0;
 	color: $header-font-color;
 	font-weight: $header-font-weight;
 	font-style: $header-font-style;
@@ -165,13 +237,10 @@ blockquote {
 		font-family: inherit;
 		&:last-child { margin-bottom: 0; }
 	}
-	footer, p + cite {
-		font-style: normal;
-		color: darken($grey-color, 15%);
-	}
-	footer:before {
-		content: '\2014 \00A0';
-	}
+	footer, p + cite, footer cite { font-style: normal; }
+	footer, p + cite { color: darken($grey-color, 15%); }
+	footer:before { content: '\2014 \00A0'; }
+
 	.ie6 &, .ie7 &, .ie8 & {
 		p {	margin-bottom: 0; }
 		p + * { margin-top: $blockquote-margin-bottom; }

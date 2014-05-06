@@ -1,3 +1,7 @@
+
+//
+// Grid System
+//
 $row-width: 1200px !default;
 $column-gutter: 30px !default;
 
@@ -11,15 +15,14 @@ $total-columns: 12 !default;
 	max-width: $row-width;
 	width: 100%;
 	@include clearfix();
+	[class*="col-"] .row {
+		width: auto;
+		max-width: none;
+		margin-right: ( $column-gutter / 2 ) * -1;
+		margin-left: ( $column-gutter / 2 ) * -1;
+	}
 }
 
-.row [class*="col-"] .row {
-	width: auto;
-	max-width: none;
-	margin-right: ( $column-gutter / 2 ) * -1;
-	margin-left: ( $column-gutter / 2 ) * -1;
-	@include clearfix();
-}
 
 @function grid-calc( $i, $columns: $total-columns ) {
 	@return percentage( $i / $columns );
@@ -55,14 +58,16 @@ $total-columns: 12 !default;
 	}
 }
 
-@for $i from 1 through $total-columns - 1 {
-	.col-#{$i} {
-		width: grid-calc($i);
+@include media {
+	@for $i from 1 through $total-columns {
+		.col-#{$i} {
+			width: grid-calc($i);
+		}
 	}
 }
 
 @include media(medium-up) {
-	@for $i from 1 through $total-columns - 1 {
+	@for $i from 1 through $total-columns {
 		.col-m-#{$i} {
 			width: grid-calc($i);
 		}
@@ -70,7 +75,7 @@ $total-columns: 12 !default;
 }
 
 @include media(large-up) {
-	@for $i from 1 through $total-columns - 1 {
+	@for $i from 1 through $total-columns {
 		.col-l-#{$i} {
 			width: grid-calc($i);
 		}

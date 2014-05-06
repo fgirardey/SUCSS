@@ -243,5 +243,23 @@
 				</address>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-12">
+				<h1>Code and Typing</h1>
+				<p>
+					If you want to kill an application, type <kbd>sudo kill -9 pid</kbd>
+				</p>
+				<p>
+					If you want to output a fullwidth background headline, type : <br>
+					<code><?php echo htmlentities( '<h1 class="fullwidth">My Title</h2>' ); ?></code>
+				</p>
+				<p>
+					The <abbr title="Php Hypertext Preprocessor">PHP</abbr> variables wich contain all globals is <code>$GLOBALS</code>
+				</p>
+				<p>
+					You just have to add <var>x</var> to <var>y</var>
+				</p>
+			</div>
+		</div>
 	</body>
 </html>
