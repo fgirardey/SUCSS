@@ -1,0 +1,38 @@
+
+$table-border: 2px solid #fff !default;
+
+$table-thead-bg: $primary-color !default;
+$table-thead-color: #fff !default;
+
+$table-even-bg: lighten($grey-color, 10%) !default;
+
+
+table {
+	width: 100%;
+}
+
+table th,
+table td {
+	padding: 0.5em 1em;
+	text-align: left;
+	font-size: 1em;
+	line-height: 1;
+}
+
+table thead {
+	color: $table-thead-color;
+	background: $table-thead-bg;
+	font-size: 1.25em;
+}
+
+table thead th {
+	border-right: $table-border;
+	border-left: $table-border;
+	&:first-child { border-left: none; }
+	&:last-child { border-right: none; }
+}
+
+table tr.even,
+table tr:nth-of-type(even) {
+	background: $table-even-bg;
+}

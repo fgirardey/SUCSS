@@ -9,7 +9,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>SUCSS - Super Useful CSS</title>
 		<link type="text/css" rel="stylesheet" href="css/style.css">
-		<!-- <link type="text/css" rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css"> -->
 		<script type="text/javascript" src="http://modernizr.com/downloads/modernizr-latest.js"></script>
 	</head>
 	<body>
@@ -21,7 +20,7 @@
 					</div>
 				</div>
 				<div class="row wrapper">
-					<!-- (div.col-1>.inner>{col-1})*12 -->
+					<!-- (div.col-1>.inner>{col-1;})*12 -->
 					<div class="col-1">
 						<div class="inner">col-1</div>
 					</div>
@@ -69,7 +68,7 @@
 					</div>
 				</div>
 				<div class="row wrapper">
-					<!-- (div.col-2>.inner>{col-2})*6 -->
+					<!-- (div.col-2>.inner>{col-2;})*6 -->
 					<div class="col-2">
 						<div class="inner">col-2</div>
 					</div>
@@ -99,7 +98,7 @@
 					</div>
 				</div>
 				<div class="row wrapper">
-					<!-- (div.col-3>.inner>{col-3})*4 -->
+					<!-- (div.col-3>.inner>{col-3;})*4 -->
 					<div class="col-3">
 						<div class="inner">col-3</div>
 					</div>
@@ -122,7 +121,7 @@
 				</div>
 			</div>
 			<div class="row wrapper">
-				<!-- (div.col-4>.inner>{col-4})*3 -->
+				<!-- (div.col-4>.inner>{col-4;})*3 -->
 				<div class="col-4">
 					<div class="inner">col-4</div>
 				</div>
@@ -141,7 +140,7 @@
 				</div>
 			</div>
 			<div class="row wrapper">
-				<!-- (div.col-6>.inner>{col-6})*2 -->
+				<!-- (div.col-6>.inner>{col-6;})*2 -->
 				<div class="col-6">
 					<div class="inner">col-6</div>
 				</div>
@@ -157,7 +156,7 @@
 				</div>
 			</div>
 			<div class="row wrapper">
-				<!-- (div.col-12>.inner>{col-12})*1 -->
+				<!-- (div.col-12>.inner>{col-12;})*1 -->
 				<div class="col-12">
 					<div class="inner">col-12</div>
 				</div>
@@ -276,7 +275,7 @@
 					</li>
 				</ul>
 				<pre><?php echo htmlentities( "ul.no-bullet ul,\nul.circle ul,\nul.disc ul,\nul.square ul" ); ?></pre>
-				
+
 				<h1>List with <code>.no-bullet</code></h1>
 				<ul class="no-bullet">
 					<li>Lorem ipsum dolor.</li>
@@ -295,13 +294,42 @@
 					<li>Lorem ipsum dolor.</li>
 				</ul>
 
-				<h1>List with <code>.square</code></h1>
+				<h1 contenteditable="true">List with <code>.square</code></h1>
 				<ul class="square">
 					<li>Lorem ipsum dolor.</li>
 					<li>Lorem ipsum dolor.</li>
 				</ul>
 			</div>
 		</div>
-		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+		<div class="row">
+			<div class="col-12">
+				<table>
+					<thead>
+						<tr>
+							<th>Colonne 1</th>
+							<th>Colonne 2</th>
+							<th>Colonne 3</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor sit amet.</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor sit amet.</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor sit amet.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</body>
 </html>
