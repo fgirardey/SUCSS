@@ -1139,6 +1139,36 @@ table tr:nth-of-type(even) {
   background: #e6e6e6;
 }
 
+/* line 5, scss/sucss/components/_forms.scss */
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-appearance: text;
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 0.4em 0.5em;
+  line-height: 1;
+}
+
+/* line 46, scss/sucss/components/_forms.scss */
+input ~ label {
+  content: "*";
+}
+
+/* line 50, scss/sucss/components/_forms.scss */
+input:required {
+  border-color: red;
+}
+
 /* line 6, scss/style.scss */
 .row.wrapper {
   color: #fff;

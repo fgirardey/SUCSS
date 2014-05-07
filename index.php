@@ -294,7 +294,7 @@
 					<li>Lorem ipsum dolor.</li>
 				</ul>
 
-				<h1 contenteditable="true">List with <code>.square</code></h1>
+				<h1>List with <code>.square</code></h1>
 				<ul class="square">
 					<li>Lorem ipsum dolor.</li>
 					<li>Lorem ipsum dolor.</li>
@@ -329,6 +329,18 @@
 						</tr>
 					</tbody>
 				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<h1>Forms</h1>
+				<form action="#">
+					<p>
+						<label for="firstname">First name</label>
+						<input type="text" required>
+						<label for="firstname">First name</label>
+					</p>
+				</form>
 			</div>
 		</div>
 	</body>
