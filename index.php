@@ -264,46 +264,42 @@
 		</div>
 		<div class="row">
 			<div class="col-12">
+				<h1>Lists</h1>
 				<ul>
-					<li>Bla bla bla</li>
-					<li>Bla bla bla</li>
-					<ul>
-						<li>Bla bla bla</li>
-						<li>Bla bla bla</li>
+					<li>Lorem ipsum dolor.</li>
+					<li>Lorem ipsum dolor.</li>
+					<li>Lorem ipsum dolor.
 						<ul>
-							<li>Bla bla bla</li>
-							<li>Bla bla bla</li>
-							<ul>
-								<li>Bla bla bla</li>
-								<li>Bla bla bla</li>
-							</ul>
+							<li>Lorem ipsum dolor.</li>
+							<li>Excepturi, illo, placeat.</li>
 						</ul>
-					</ul>
+					</li>
 				</ul>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-12">
-				<ol>
-					<li>Bla bla bla</li>
-					<li>Bla bla bla</li>
-					<ol>
-						<li>Bla bla bla</li>
-						<li>Bla bla bla</li>
-						<ol>
-							<li>Bla bla bla</li>
-							<li>Bla bla bla</li>
-							<ol>
-								<li>Bla bla bla</li>
-								<li>Bla bla bla</li>
-								<ol>
-									<li>Bla bla bla</li>
-									<li>Bla bla bla</li>
-								</ol>
-							</ol>
-						</ol>
-					</ol>
-				</ol>
+				<pre><?php echo htmlentities( "ul.no-bullet ul,\nul.circle ul,\nul.disc ul,\nul.square ul" ); ?></pre>
+				
+				<h1>List with <code>.no-bullet</code></h1>
+				<ul class="no-bullet">
+					<li>Lorem ipsum dolor.</li>
+					<li>Lorem ipsum dolor.</li>
+				</ul>
+				
+				<h1>List with <code>.circle</code></h1>
+				<ul class="circle">
+					<li>Lorem ipsum dolor.</li>
+					<li>Lorem ipsum dolor.</li>
+				</ul>
+
+				<h1>List with <code>.disc</code></h1>
+				<ul class="disc">
+					<li>Lorem ipsum dolor.</li>
+					<li>Lorem ipsum dolor.</li>
+				</ul>
+
+				<h1>List with <code>.square</code></h1>
+				<ul class="square">
+					<li>Lorem ipsum dolor.</li>
+					<li>Lorem ipsum dolor.</li>
+				</ul>
 			</div>
 		</div>
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

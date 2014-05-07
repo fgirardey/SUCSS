@@ -18,21 +18,44 @@ code, kbd, pre, samp {
 	font-family: $global-monospace-font;
 }
 
-ul, ol {
-	margin-left: 1em;
-}
-
-ol {
-	list-style-type: decimal;
-	ol { list-style-type: upper-alpha; }
-	ol ol { list-style-type: lower-alpha; }
-	ol ol ol { list-style-type: upper-roman; }
-	ol ol ol ol { list-style-type: lower-roman; }
-}
 
 
 //
-// Type utility Classes
+// Lists
+//
+$list-margin-left: 1em !default;
+$list-margin-bottom: 1em !default;
+$list-style-position: outside !default;
+$list-font-size: 1em !default;
+$list-line-height: 1.6 !default;
+ul, ol, dl {
+	margin-bottom: $list-margin-bottom;
+	list-style-position: $list-style-position;
+	font-size: $list-font-size;
+	font-family: inherit;
+	line-height: $list-line-height;
+}
+
+ul, ol {
+	margin-left: $list-margin-left;
+}
+
+ul.no-bullet ul,
+ul.circle ul,
+ul.disc ul,
+ul.square ul {
+	list-style: inherit;
+}
+
+ul.circle {	list-style-type: circle; }
+ul.disc {	list-style-type: disc; }
+ul.no-bullet { margin-left: 0; list-style: none; }
+ul.square {	list-style-type: square; }
+
+
+
+//
+// Type utility
 //
 .text-right { text-align: right; }
 .text-left { text-align: left; }
@@ -66,7 +89,7 @@ address {
 
 
 //
-// Abbr
+// Abbreviation
 //
 $abbr-border-bottom: 1px dotted !default;
 
@@ -92,7 +115,7 @@ mark {
 
 
 //
-// Kbd
+// Keystrokes
 //
 $kbd-padding: 2px 4px !default;
 $kbd-font-size: 0.9em !default;
@@ -110,6 +133,20 @@ kbd {
 
 
 //
+// Pre
+//
+$pre-margin-bottom: 1em !default;
+$pre-bg: #F3F3F7 !default;
+pre {
+	margin-bottom: $pre-margin-bottom;
+	padding: $column-gutter / 2;
+	border: 1px solid darken($pre-bg, 10%);
+	background: $pre-bg;
+}
+
+
+
+//
 // Code
 //
 $code-padding: 2px 4px !default;
@@ -123,7 +160,7 @@ code {
 	border-radius: $code-border-radius;
 	background: $code-bg;
 	color: $global-var-font-color;
-	white-space: nowrap;
+	white-space: pre-wrap;
 	font-size: $code-font-size;
 }
 
@@ -167,6 +204,7 @@ $h6-font-size: 1.25em !default;
 
 @include hn {
 	margin: $header-margin-vertical 0;
+	margin: rem-calc($header-margin-vertical) 0;
 	color: $header-font-color;
 	font-weight: $header-font-weight;
 	font-style: $header-font-style;
