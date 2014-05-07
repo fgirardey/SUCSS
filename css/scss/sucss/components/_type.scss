@@ -18,6 +18,17 @@ code, kbd, pre, samp {
 	font-family: $global-monospace-font;
 }
 
+ul, ol {
+	margin-left: 1em;
+}
+
+ol {
+	list-style-type: decimal;
+	ol { list-style-type: upper-alpha; }
+	ol ol { list-style-type: lower-alpha; }
+	ol ol ol { list-style-type: upper-roman; }
+	ol ol ol ol { list-style-type: lower-roman; }
+}
 
 
 //
@@ -107,16 +118,7 @@ $code-bg: lighten($global-var-font-color, 51%) !default;
 $code-font-color: $global-var-font-color !default;
 $code-font-size: 0.9em !default;
 
-.ie6 code, .ie7 code, .ie8 code {
-	padding: $code-padding;
-	border-radius: $code-border-radius;
-	background: $code-bg;
-	color: $global-var-font-color;
-	white-space: nowrap;
-	font-size: $code-font-size;
-}
-
-code:not([class*="language-"]) {
+code {
 	padding: $code-padding;
 	border-radius: $code-border-radius;
 	background: $code-bg;
@@ -258,5 +260,6 @@ blockquote.blockquote--highlight {
 		color: $grey-color;
 	}
 	cite { font-weight: 400; }
+	@include antialiased();
 }
 
