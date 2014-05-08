@@ -18,8 +18,13 @@ $global-var-font-color: #C7254E !default;
 //
 // Colors
 //
-$primary-color: #09f !default;
 $grey-color: #ccc !default;
+
+$primary-color: #09f !default;
+$success-color: #2ecc71 !default;
+$info-color: #5bc0de !default;
+$warning-color: #f39c12 !default;
+$danger-color: #d9534f !default;
 
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
@@ -41,6 +46,27 @@ body {
 	font-size: $body-font-size;
 	font-family: $body-font-family;
 }
+
+
+
+//
+// Link Styles
+//
+$link-decoration: none !default;
+$link-color: blue !default;
+
+$link-hover-decoration: solid !default;
+$link-hover-color: darken($link-color, 10%) !default;
+
+a {
+	color: $link-color;
+	text-decoration: $link-decoration;
+	&:hover {
+		color: $link-hover-color;
+		@include underline($style: $link-hover-decoration);
+	}
+}
+
 
 
 .right, .alignright { float: right !important; }

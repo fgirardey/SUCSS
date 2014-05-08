@@ -24,9 +24,7 @@ $total-columns: 12 !default;
 }
 
 
-@function grid-calc( $i, $columns: $total-columns ) {
-	@return percentage( $i / $columns );
-}
+
 
 [class*="col-"] {
 	position: relative;
@@ -39,6 +37,49 @@ $total-columns: 12 !default;
 	}
 }
 
+// This mixin calculate the width of a column
+@function grid-calc( $i, $columns: $total-columns ) {
+	@return percentage( $i / $columns );
+}
+
+//
+// Small columns
+//
+@include media {
+	@for $i from 1 through $total-columns {
+		.col-#{$i} {
+			width: grid-calc($i);
+		}
+	}
+}
+
+//
+// Medium columns
+//
+@include media(medium-up) {
+	@for $i from 1 through $total-columns {
+		.col-m-#{$i} {
+			width: grid-calc($i);
+		}
+	}
+}
+
+//
+// Large columns
+//
+@include media(large-up) {
+	@for $i from 1 through $total-columns {
+		.col-l-#{$i} {
+			width: grid-calc($i);
+		}
+	}
+}
+
+
+
+//
+// Full width block
+//
 .full-width {
 	position: relative;
 	background: inherit;
@@ -55,29 +96,5 @@ $total-columns: 12 !default;
 	}
 	&:after {
 		left: 100%;
-	}
-}
-
-@include media {
-	@for $i from 1 through $total-columns {
-		.col-#{$i} {
-			width: grid-calc($i);
-		}
-	}
-}
-
-@include media(medium-up) {
-	@for $i from 1 through $total-columns {
-		.col-m-#{$i} {
-			width: grid-calc($i);
-		}
-	}
-}
-
-@include media(large-up) {
-	@for $i from 1 through $total-columns {
-		.col-l-#{$i} {
-			width: grid-calc($i);
-		}
 	}
 }

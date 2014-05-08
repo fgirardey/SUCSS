@@ -21,6 +21,96 @@ code, kbd, pre, samp {
 
 
 //
+// Header Styles
+//
+$header-margin-vertical: $rem-base !default;
+$header-font-color: inherit !default;
+$header-font-weight: 600 !default;
+$header-font-style: normal !default;
+$header-font-family: inherit !default;
+$header-line-height: 1.25 !default;
+$header-text-rendering: optimizeLegibility !default;
+
+$h1-font-size: 2.5em !default;
+$h2-font-size: 2.25em !default;
+$h3-font-size: 2em !default;
+$h4-font-size: 1.75em !default;
+$h5-font-size: 1.5em !default;
+$h6-font-size: 1.25em !default;
+
+// This mixin output an hn, .hn style.
+@mixin hn( $hn: false ) {
+	@if $hn {
+		#{$hn}, .#{$hn} {
+			@content;
+		}
+	} @else {
+		h1, .h1,
+		h2, .h2,
+		h3, .h3,
+		h4, .h4,
+		h5, .h5,
+		h6, .h6 {
+			@content;
+		}
+	}
+}
+
+@include hn {
+	margin: $header-margin-vertical 0;
+	margin: rem-calc($header-margin-vertical) 0;
+	color: $header-font-color;
+	font-weight: $header-font-weight;
+	font-style: $header-font-style;
+	font-family: $header-font-family;
+	line-height: $header-line-height;
+	text-rendering: $header-text-rendering;
+	@include antialiased();
+	a, a:hover {
+		color: inherit;
+		border-bottom: none;
+	}
+	small {
+		font-size: 0.6em;
+	}
+}
+
+
+@include hn( h1 ) { font-size: $h1-font-size; }
+@include hn( h2 ) { font-size: $h2-font-size; }
+@include hn( h3 ) { font-size: $h3-font-size; }
+@include hn( h4 ) { font-size: $h4-font-size; }
+@include hn( h5 ) { font-size: $h5-font-size; }
+@include hn( h6 ) { font-size: $h6-font-size; }
+
+
+
+//
+// Paragraph Style
+//
+$paragraph-margin-bottom: 1em !default;
+$paragraph-font-color: inherit !default;
+$paragraph-font-weight: normal !default;
+$paragraph-font-style: normal !default;
+$paragraph-font-size: 1em !default;
+$paragraph-font-family: inherit !default;
+$paragraph-line-height: 1.4 !default;
+$paragraph-text-rendering: optimizeLegibility !default;
+
+p {
+	margin-bottom: $paragraph-margin-bottom;
+	color: $paragraph-font-color;
+	font-weight: $paragraph-font-weight;
+	font-style: $paragraph-font-style;
+	font-size:  $paragraph-font-size;
+	font-family: $paragraph-font-family;
+	line-height: $paragraph-line-height;
+	text-rendering: $paragraph-text-rendering;
+}
+
+
+
+//
 // Lists
 //
 $list-margin-left: 1em !default;
@@ -91,11 +181,10 @@ address {
 //
 // Abbreviation
 //
-$abbr-border-bottom: 1px dotted !default;
+$abbr-border-bottom: dotted !default;
 
 abbr[title] {
-	border-bottom: $abbr-border-bottom;
-	border-bottom-color: initial;
+	@include underline($style: $abbr-border-bottom);
 	cursor: help;
 }
 
@@ -110,6 +199,16 @@ $mark-padding: 0 0.1em !default;
 mark {
 	padding: $mark-padding;
 	background: $mark-bg;
+}
+
+
+
+//
+// Ins
+//
+ins {
+	text-decoration: none;
+	border-bottom: 1px solid;
 }
 
 
@@ -162,95 +261,6 @@ code {
 	color: $global-var-font-color;
 	white-space: pre-wrap;
 	font-size: $code-font-size;
-}
-
-
-
-//
-// Header Styles
-//
-$header-margin-vertical: $rem-base !default;
-$header-font-color: inherit !default;
-$header-font-weight: 600 !default;
-$header-font-style: normal !default;
-$header-font-family: inherit !default;
-$header-line-height: 1.25 !default;
-$header-text-rendering: optimizeLegibility !default;
-
-$h1-font-size: 2.5em !default;
-$h2-font-size: 2.25em !default;
-$h3-font-size: 2em !default;
-$h4-font-size: 1.75em !default;
-$h5-font-size: 1.5em !default;
-$h6-font-size: 1.25em !default;
-
-// This mixin output an hn, .hn style.
-@mixin hn( $hn: false ) {
-	@if $hn {
-		#{$hn}, .#{$hn} {
-			@content;
-		}
-	} @else {
-		h1, .h1,
-		h2, .h2,
-		h3, .h3,
-		h4, .h4,
-		h5, .h5,
-		h6, .h6 {
-			@content;
-		}
-	}
-}
-
-@include hn {
-	margin: $header-margin-vertical 0;
-	margin: rem-calc($header-margin-vertical) 0;
-	color: $header-font-color;
-	font-weight: $header-font-weight;
-	font-style: $header-font-style;
-	font-family: $header-font-family;
-	line-height: $header-line-height;
-	text-rendering: $header-text-rendering;
-	@include antialiased();
-	a {
-		color: inherit;
-	}
-	small {
-		font-size: 0.6em;
-	}
-}
-
-
-@include hn( h1 ) { font-size: $h1-font-size; }
-@include hn( h2 ) { font-size: $h2-font-size; }
-@include hn( h3 ) { font-size: $h3-font-size; }
-@include hn( h4 ) { font-size: $h4-font-size; }
-@include hn( h5 ) { font-size: $h5-font-size; }
-@include hn( h6 ) { font-size: $h6-font-size; }
-
-
-
-//
-// Paragraph Style
-//
-$paragraph-margin-bottom: 1em !default;
-$paragraph-font-color: inherit !default;
-$paragraph-font-weight: normal !default;
-$paragraph-font-style: normal !default;
-$paragraph-font-size: 1em !default;
-$paragraph-font-family: inherit !default;
-$paragraph-line-height: 1.4 !default;
-$paragraph-text-rendering: optimizeLegibility !default;
-
-p {
-	margin-bottom: $paragraph-margin-bottom;
-	color: $paragraph-font-color;
-	font-weight: $paragraph-font-weight;
-	font-style: $paragraph-font-style;
-	font-size:  $paragraph-font-size;
-	font-family: $paragraph-font-family;
-	line-height: $paragraph-line-height;
-	text-rendering: $paragraph-text-rendering;
 }
 
 

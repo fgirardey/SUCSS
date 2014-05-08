@@ -1,52 +1,62 @@
 
-// This mixin output style depending on the appearance of the input
-@mixin input($appearance: false) {
-	@if $appearance == text {
-		input[type="color"],
-		input[type="date"],
-		input[type="datetime"],
-		input[type="datetime-local"],
-		input[type="month"],
-		input[type="tel"],
-		input[type="text"],
-		input[type="time"],
-		input[type="url"],
-		input[type="week"] {
-			-webkit-appearance: text;
-			@content;
-		}
-	} @else if $appearance == button {
-		button, .button,
-		input[type="button"],
-		input[type="reset"],
-		input[type="submit"] {
-			@content;
-		}
-	} @else {
-		input {
-			@content;
-		}
-	}
+//
+// Label
+//
+$label-asterisk-color: red !default;
+
+label {
+	display: inline-block;
+	padding: 0.4em 0;
+	width: 100%;
+	font-size: 0.8em;
+	line-height: 1;
 }
 
+label[for] {
+	cursor: pointer;
+}
+
+label.required:after,
+label[required]:after {
+	content: "\00a0*";
+	color: $label-asterisk-color;
+}
+
+
+
+//
+// Input with textfield appearance
+//
 $input-width: 100% !default;
 $input-border: 1px solid $grey-color !default;
 $input-border-radius: $global-radius !default;
 $input-font-size: 1em !default;
+$input-padding: 0.4em 0.5em !default;
+$input-line-height: normal !default;
 
-@include input(text) {
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+	display: inline-block;
 	width: $input-width;
 	border: $input-border;
 	border-radius: $input-border-radius;
+	box-shadow: none;
 	font-size: $input-font-size;
-	padding: 0.4em 0.5em;
-	line-height: 1;
+	padding: $input-padding;
+	line-height: $input-line-height;
+	-webkit-appearance: none;
 }
 
-input ~ label {
-	content: "*";
-}
 
-input:required {
-	border-color: red;
-}

@@ -1,0 +1,51 @@
+
+
+
+$button-hover-amount: 10% !default;
+
+@mixin button($bg-color: #fff, $amount: $button-hover-amount) {
+	background-color: $bg-color;
+	color: get-color($bg-color);
+	border: 1px solid darken($bg-color, $amount);
+	&:hover, &:focus {
+		$bg-hover-color: darken($bg-color, $amount);
+		background-color: $bg-hover-color;
+		color: get-color($bg-hover-color);
+	}
+	&:active {
+		$bg-active-color: darken($bg-color, $amount + 5%);
+		background-color: $bg-active-color;
+		color: get-color($bg-active-color);
+	}
+}
+
+$btn-default-bg-color: #fff !default;
+$btn-primary-bg-color: $primary-color !default;
+$btn-success-bg-color: $success-color !default;
+$btn-info-bg-color: $info-color !default;
+$btn-warning-bg-color: $warning-color !default;
+$btn-danger-bg-color: $danger-color !default;
+$btn-link-bg-color: $link-color !default;
+
+.btn-default { @include button($bg-color: $btn-default-bg-color); }
+.btn-primary { @include button($bg-color: $btn-primary-bg-color); }
+.btn-success { @include button($bg-color: $btn-success-bg-color); }
+.btn-info    { @include button($bg-color: $btn-info-bg-color); }
+.btn-warning { @include button($bg-color: $btn-warning-bg-color); }
+.btn-danger  { @include button($bg-color: $btn-danger-bg-color); }
+
+
+.btn {
+	display: inline-block;
+	padding: 0.5em 0.85em;
+	border-radius: $global-radius;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	font-size: 0.9em;
+	line-height: normal;
+	@extend .btn-default;
+}
+
+

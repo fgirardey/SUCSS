@@ -8,6 +8,15 @@ $rem-base: 16px !default;
 	@return strip-unit( $remBase / $value ) * 1rem;
 }
 
+@function get-color($color) {
+	@if (lightness( $color ) > 70) {
+		@return #000;
+	}
+	@else {
+		@return #fff;
+	}
+}
+
 //
 // Media Query
 //
@@ -55,4 +64,13 @@ $large-only: "#{$screen} and (min-width: #{nth($large-range, 1)}) and (max-width
 	} @else {
 		@content;
 	}
+}
+
+
+
+//
+// Underline mixin
+//
+@mixin underline($style: solid) {
+	border-bottom: 1px $style;
 }

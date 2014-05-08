@@ -327,8 +327,39 @@
 							<td>Lorem ipsum dolor sit amet.</td>
 							<td>Lorem ipsum dolor sit amet.</td>
 						</tr>
+						<tr>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor sit amet.</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor sit amet.</td>
+						</tr>
 					</tbody>
 				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<h1>Buttons</h1>
+				<p>
+					<a href="#" class="btn">Default</a>
+					<a href="#" class="btn btn-primary">Primary</a>
+					<a href="#" class="btn btn-success">Success</a>
+					<a href="#" class="btn btn-info">Info</a>
+					<a href="#" class="btn btn-warning">Warning</a>
+					<a href="#" class="btn btn-danger">Danger</a>
+				</p>
+				<p>
+					<button class="btn">Default</button>
+					<button class="btn btn-primary">Primary</button>
+					<button class="btn btn-success">Success</button>
+					<button class="btn btn-info">Info</button>
+					<button class="btn btn-warning">Warning</button>
+					<button class="btn btn-danger">Danger</button>
+				</p>
 			</div>
 		</div>
 		<div class="row">
@@ -336,12 +367,22 @@
 				<h1>Forms</h1>
 				<form action="#">
 					<p>
-						<label for="firstname">First name</label>
+						<label class="required">First name</label>
 						<input type="text" required>
-						<label for="firstname">First name</label>
+					</p>
+					<p>
+						<div class="row">
+							<div class="col-1">
+								<label for="lastname" class="inline">Last name</label>
+							</div>
+							<div class="col-11">
+								<input id="lastname" type="text">
+							</div>
+						</div>
 					</p>
 				</form>
 			</div>
 		</div>
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	</body>
 </html>
