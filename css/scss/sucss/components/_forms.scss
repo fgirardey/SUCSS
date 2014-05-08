@@ -47,6 +47,7 @@ input[type="search"],
 input[type="tel"],
 input[type="time"],
 input[type="url"],
+select,
 textarea {
 	display: inline-block;
 	width: $input-width;
@@ -59,4 +60,7 @@ textarea {
 	-webkit-appearance: none;
 }
 
-
+select {
+	-webkit-appearance: menulist;
+	height: 2em;
+}

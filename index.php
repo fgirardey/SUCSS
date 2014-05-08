@@ -380,6 +380,13 @@
 							</div>
 						</div>
 					</p>
+					<p>
+						<select name="" id="">
+							<option value="1">Valeur par défaut</option>
+							<option value="2">Lorem ipsum.</option>
+							<option value="3">Lorem ipsum.</option>
+						</select>
+					</p>
 				</form>
 			</div>
 		</div>

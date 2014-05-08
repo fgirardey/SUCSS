@@ -1,23 +1,30 @@
 
-
-
 $button-hover-amount: 10% !default;
 
 @mixin button($bg-color: #fff, $amount: $button-hover-amount) {
+	border: 1px solid darken($bg-color, $amount);
 	background-color: $bg-color;
 	color: get-color($bg-color);
-	border: 1px solid darken($bg-color, $amount);
 	&:hover, &:focus {
 		$bg-hover-color: darken($bg-color, $amount);
+		border: 1px solid darken($bg-hover-color, $amount);
 		background-color: $bg-hover-color;
 		color: get-color($bg-hover-color);
 	}
 	&:active {
 		$bg-active-color: darken($bg-color, $amount + 5%);
+		border: 1px solid darken($bg-active-color, $amount);
 		background-color: $bg-active-color;
 		color: get-color($bg-active-color);
 	}
 }
+
+$btn-padding: 0.45em 0.85em !default;
+$btn-border-radius: $global-radius !default;
+$btn-font-size: 0.875em !default;
+$btn-line-height: 1.25 !default;
+$btn-margin-top: 0.31em !default;
+$btn-margin-bottom: $btn-margin-top !default;
 
 $btn-default-bg-color: #fff !default;
 $btn-primary-bg-color: $primary-color !default;
@@ -37,15 +44,16 @@ $btn-link-bg-color: $link-color !default;
 
 .btn {
 	display: inline-block;
-	padding: 0.5em 0.85em;
-	border-radius: $global-radius;
+	margin-top: $btn-margin-top;
+	margin-bottom: $btn-margin-bottom;
+	padding: $btn-padding;
+	border-radius: $btn-border-radius;
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
-	font-size: 0.9em;
-	line-height: normal;
+	font-size: $btn-font-size;
+	line-height: $btn-line-height;
 	@extend .btn-default;
 }
-
 
