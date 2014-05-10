@@ -1161,126 +1161,122 @@ table tr:nth-of-type(even) {
   background: #e6e6e6;
 }
 
-/* line 37, scss/sucss/components/_buttons.scss */
+/* line 35, scss/sucss/components/_buttons.scss */
 .btn-default, .btn {
-  border: 1px solid #e6e6e6;
+  box-shadow: 0px 0.2em 0px 0px #e6e6e6;
   background-color: white;
   color: black;
 }
 /* line 8, scss/sucss/components/_buttons.scss */
 .btn-default:hover, .btn:hover, .btn-default:focus, .btn:focus {
-  border: 1px solid #cccccc;
+  box-shadow: 0px 0.2em 0px 0px #cccccc;
   background-color: #e6e6e6;
   color: black;
 }
 /* line 14, scss/sucss/components/_buttons.scss */
 .btn-default:active, .btn:active {
-  border: 1px solid #bfbfbf;
-  background-color: #d9d9d9;
-  color: black;
+  box-shadow: none;
+  top: 0.2em;
 }
 
-/* line 38, scss/sucss/components/_buttons.scss */
+/* line 36, scss/sucss/components/_buttons.scss */
 .btn-primary {
-  border: 1px solid #007acc;
+  box-shadow: 0px 0.2em 0px 0px #007acc;
   background-color: #0099ff;
   color: white;
 }
 /* line 8, scss/sucss/components/_buttons.scss */
 .btn-primary:hover, .btn-primary:focus {
-  border: 1px solid #005c99;
+  box-shadow: 0px 0.2em 0px 0px #005c99;
   background-color: #007acc;
   color: white;
 }
 /* line 14, scss/sucss/components/_buttons.scss */
 .btn-primary:active {
-  border: 1px solid #004c80;
-  background-color: #006bb3;
-  color: white;
+  box-shadow: none;
+  top: 0.2em;
 }
 
-/* line 39, scss/sucss/components/_buttons.scss */
+/* line 37, scss/sucss/components/_buttons.scss */
 .btn-success {
-  border: 1px solid #25a25a;
+  box-shadow: 0px 0.2em 0px 0px #25a25a;
   background-color: #2ecc71;
   color: white;
 }
 /* line 8, scss/sucss/components/_buttons.scss */
 .btn-success:hover, .btn-success:focus {
-  border: 1px solid #1b7943;
+  box-shadow: 0px 0.2em 0px 0px #1b7943;
   background-color: #25a25a;
   color: white;
 }
 /* line 14, scss/sucss/components/_buttons.scss */
 .btn-success:active {
-  border: 1px solid #176437;
-  background-color: #208e4e;
-  color: white;
+  box-shadow: none;
+  top: 0.2em;
 }
 
-/* line 40, scss/sucss/components/_buttons.scss */
+/* line 38, scss/sucss/components/_buttons.scss */
 .btn-info {
-  border: 1px solid #31b0d5;
+  box-shadow: 0px 0.2em 0px 0px #31b0d5;
   background-color: #5bc0de;
   color: white;
 }
 /* line 8, scss/sucss/components/_buttons.scss */
 .btn-info:hover, .btn-info:focus {
-  border: 1px solid #2390b0;
+  box-shadow: 0px 0.2em 0px 0px #2390b0;
   background-color: #31b0d5;
   color: white;
 }
 /* line 14, scss/sucss/components/_buttons.scss */
 .btn-info:active {
-  border: 1px solid #1f7e9a;
-  background-color: #28a1c5;
-  color: white;
+  box-shadow: none;
+  top: 0.2em;
 }
 
-/* line 41, scss/sucss/components/_buttons.scss */
+/* line 39, scss/sucss/components/_buttons.scss */
 .btn-warning {
-  border: 1px solid #c87f0a;
+  box-shadow: 0px 0.2em 0px 0px #c87f0a;
   background-color: #f39c12;
   color: white;
 }
 /* line 8, scss/sucss/components/_buttons.scss */
 .btn-warning:hover, .btn-warning:focus {
-  border: 1px solid #976008;
+  box-shadow: 0px 0.2em 0px 0px #976008;
   background-color: #c87f0a;
   color: white;
 }
 /* line 14, scss/sucss/components/_buttons.scss */
 .btn-warning:active {
-  border: 1px solid #7f5006;
-  background-color: #b06f09;
-  color: white;
+  box-shadow: none;
+  top: 0.2em;
 }
 
-/* line 42, scss/sucss/components/_buttons.scss */
+/* line 40, scss/sucss/components/_buttons.scss */
 .btn-danger {
-  border: 1px solid #c9302c;
+  box-shadow: 0px 0.2em 0px 0px #c9302c;
   background-color: #d9534f;
   color: white;
 }
 /* line 8, scss/sucss/components/_buttons.scss */
 .btn-danger:hover, .btn-danger:focus {
-  border: 1px solid #a02622;
+  box-shadow: 0px 0.2em 0px 0px #a02622;
   background-color: #c9302c;
   color: white;
 }
 /* line 14, scss/sucss/components/_buttons.scss */
 .btn-danger:active {
-  border: 1px solid #8b211e;
-  background-color: #b52b27;
-  color: white;
+  box-shadow: none;
+  top: 0.2em;
 }
 
-/* line 45, scss/sucss/components/_buttons.scss */
+/* line 43, scss/sucss/components/_buttons.scss */
 .btn {
+  position: relative;
   display: inline-block;
   margin-top: 0.31em;
   margin-bottom: 0.31em;
   padding: 0.45em 0.85em;
+  outline: 0;
   border-radius: 5px;
   vertical-align: middle;
   text-align: center;
@@ -1288,6 +1284,10 @@ table tr:nth-of-type(even) {
   white-space: nowrap;
   font-size: 0.875em;
   line-height: 1.25;
+}
+/* line 57, scss/sucss/components/_buttons.scss */
+.btn, .btn:hover {
+  border: none;
 }
 
 /* line 7, scss/sucss/components/_forms.scss */

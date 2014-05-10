@@ -343,14 +343,14 @@
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<h1>Buttons</h1>
+				<h1 id="buttons">Buttons</h1>
 				<p>
-					<a href="#" class="btn">Default</a>
-					<a href="#" class="btn btn-primary">Primary</a>
-					<a href="#" class="btn btn-success">Success</a>
-					<a href="#" class="btn btn-info">Info</a>
-					<a href="#" class="btn btn-warning">Warning</a>
-					<a href="#" class="btn btn-danger">Danger</a>
+					<a href="#buttons" class="btn">Default</a>
+					<a href="#buttons" class="btn btn-primary">Primary</a>
+					<a href="#buttons" class="btn btn-success">Success</a>
+					<a href="#buttons" class="btn btn-info">Info</a>
+					<a href="#buttons" class="btn btn-warning">Warning</a>
+					<a href="#buttons" class="btn btn-danger">Danger</a>
 				</p>
 				<p>
 					<button class="btn">Default</button>

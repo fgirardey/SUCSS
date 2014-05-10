@@ -2,20 +2,18 @@
 $button-hover-amount: 10% !default;
 
 @mixin button($bg-color: #fff, $amount: $button-hover-amount) {
-	border: 1px solid darken($bg-color, $amount);
+	box-shadow: 0px 0.2em 0px 0px darken($bg-color, $amount);
 	background-color: $bg-color;
 	color: get-color($bg-color);
 	&:hover, &:focus {
 		$bg-hover-color: darken($bg-color, $amount);
-		border: 1px solid darken($bg-hover-color, $amount);
+		box-shadow: 0px 0.2em 0px 0px darken($bg-hover-color, $amount);
 		background-color: $bg-hover-color;
 		color: get-color($bg-hover-color);
 	}
 	&:active {
-		$bg-active-color: darken($bg-color, $amount + 5%);
-		border: 1px solid darken($bg-active-color, $amount);
-		background-color: $bg-active-color;
-		color: get-color($bg-active-color);
+		box-shadow: none;
+		top: 0.2em;
 	}
 }
 
@@ -43,10 +41,12 @@ $btn-link-bg-color: $link-color !default;
 
 
 .btn {
+	position: relative;
 	display: inline-block;
 	margin-top: $btn-margin-top;
 	margin-bottom: $btn-margin-bottom;
 	padding: $btn-padding;
+	outline: 0;
 	border-radius: $btn-border-radius;
 	vertical-align: middle;
 	text-align: center;
@@ -54,6 +54,7 @@ $btn-link-bg-color: $link-color !default;
 	white-space: nowrap;
 	font-size: $btn-font-size;
 	line-height: $btn-line-height;
+	&, &:hover { border: none; }
 	@extend .btn-default;
 }
 
