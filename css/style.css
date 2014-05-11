@@ -1328,17 +1328,18 @@ input[type="url"],
 select,
 textarea {
   display: inline-block;
+  padding: 0.4em 0.5em;
   width: 100%;
   border: 1px solid #cccccc;
   border-radius: 5px;
+  background: none;
   box-shadow: none;
   font-size: 1em;
-  padding: 0.4em 0.5em;
   line-height: normal;
   -webkit-appearance: none;
 }
 
-/* line 63, scss/sucss/components/_forms.scss */
+/* line 64, scss/sucss/components/_forms.scss */
 select {
   -webkit-appearance: menulist;
   height: 2em;

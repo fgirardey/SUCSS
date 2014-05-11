@@ -50,12 +50,13 @@ input[type="url"],
 select,
 textarea {
 	display: inline-block;
+	padding: $input-padding;
 	width: $input-width;
 	border: $input-border;
 	border-radius: $input-border-radius;
+	background: none;
 	box-shadow: none;
 	font-size: $input-font-size;
-	padding: $input-padding;
 	line-height: $input-line-height;
 	-webkit-appearance: none;
 }
