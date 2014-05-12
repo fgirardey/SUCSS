@@ -542,18 +542,18 @@ img.aligncenter {
 }
 
 /* line 120, scss/sucss/components/_global.scss */
-.s-collapse {
+.collapse {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
 
 /* line 125, scss/sucss/components/_global.scss */
-.s-collapse-left {
+.collapse-left {
   padding-left: 0 !important;
 }
 
 /* line 129, scss/sucss/components/_global.scss */
-.s-collapse-right {
+.collapse-right {
   padding-right: 0 !important;
 }
 
@@ -935,7 +935,7 @@ p {
   font-style: normal;
   font-size: 1em;
   font-family: inherit;
-  line-height: 1.4;
+  line-height: 1.6;
   text-rendering: optimizeLegibility;
 }
 

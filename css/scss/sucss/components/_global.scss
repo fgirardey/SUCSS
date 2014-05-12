@@ -117,16 +117,16 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 // Collapse utility classes
 //
 @include media {
-	.s-collapse {
+	.collapse {
 		padding-right: 0 !important;
 		padding-left: 0 !important;
 	}
 
-	.s-collapse-left {
+	.collapse-left {
 		padding-left: 0 !important;
 	}
 
-	.s-collapse-right {
+	.collapse-right {
 		padding-right: 0 !important;
 	}
 }
