@@ -343,22 +343,23 @@
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<h1 id="buttons">Buttons</h1>
+				<h1 id="btn">Classic Buttons</h1>
 				<p>
-					<a href="#buttons" class="btn">Default</a>
-					<a href="#buttons" class="btn btn-primary">Primary</a>
-					<a href="#buttons" class="btn btn-success">Success</a>
-					<a href="#buttons" class="btn btn-info">Info</a>
-					<a href="#buttons" class="btn btn-warning">Warning</a>
-					<a href="#buttons" class="btn btn-danger">Danger</a>
+					<a href="#btn" class="btn">Default</a>
+					<a href="#btn" class="btn btn-primary">Primary</a>
+					<a href="#btn" class="btn btn-success">Success</a>
+					<a href="#btn" class="btn btn-info">Info</a>
+					<a href="#btn" class="btn btn-warning">Warning</a>
+					<a href="#btn" class="btn btn-danger">Danger</a>
 				</p>
+				<h1 id="push-button">Classic Buttons</h1>
 				<p>
 					<button class="btn">Default</button>
-					<button class="btn btn-primary">Primary</button>
-					<button class="btn btn-success">Success</button>
-					<button class="btn btn-info">Info</button>
-					<button class="btn btn-warning">Warning</button>
-					<button class="btn btn-danger">Danger</button>
+					<button class="btn btn-push-primary">Primary</button>
+					<button class="btn btn-push-success">Success</button>
+					<button class="btn btn-push-info">Info</button>
+					<button class="btn btn-push-warning">Warning</button>
+					<button class="btn btn-push-danger">Danger</button>
 				</p>
 			</div>
 		</div>
