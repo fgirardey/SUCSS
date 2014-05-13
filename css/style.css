@@ -982,57 +982,99 @@ ul.square {
   list-style-type: square;
 }
 
-/* line 150, scss/sucss/components/_type.scss */
+/* line 151, scss/sucss/components/_type.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 151, scss/sucss/components/_type.scss */
+/* line 152, scss/sucss/components/_type.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 152, scss/sucss/components/_type.scss */
+/* line 153, scss/sucss/components/_type.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 153, scss/sucss/components/_type.scss */
+/* line 154, scss/sucss/components/_type.scss */
 .text-justify {
   text-align: justify;
 }
 
-/* line 163, scss/sucss/components/_type.scss */
+@media only screen and (min-width: 40.0625em) {
+  /* line 158, scss/sucss/components/_type.scss */
+  .m-text-right {
+    text-align: right;
+  }
+
+  /* line 159, scss/sucss/components/_type.scss */
+  .m-text-left {
+    text-align: left;
+  }
+
+  /* line 160, scss/sucss/components/_type.scss */
+  .m-text-center {
+    text-align: center;
+  }
+
+  /* line 161, scss/sucss/components/_type.scss */
+  .m-text-justify {
+    text-align: justify;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  /* line 165, scss/sucss/components/_type.scss */
+  .l-text-right {
+    text-align: right;
+  }
+
+  /* line 166, scss/sucss/components/_type.scss */
+  .l-text-left {
+    text-align: left;
+  }
+
+  /* line 167, scss/sucss/components/_type.scss */
+  .l-text-center {
+    text-align: center;
+  }
+
+  /* line 168, scss/sucss/components/_type.scss */
+  .l-text-justify {
+    text-align: justify;
+  }
+}
+/* line 180, scss/sucss/components/_type.scss */
 small, .small {
   font-size: 0.8em;
 }
 
-/* line 173, scss/sucss/components/_type.scss */
+/* line 190, scss/sucss/components/_type.scss */
 address {
   font-style: normal;
   font-size: 1em;
   margin-bottom: 1em;
 }
 
-/* line 186, scss/sucss/components/_type.scss */
+/* line 203, scss/sucss/components/_type.scss */
 abbr[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
 
-/* line 199, scss/sucss/components/_type.scss */
+/* line 216, scss/sucss/components/_type.scss */
 mark {
   padding: 0 0.1em;
   background: #ffffaa;
 }
 
-/* line 209, scss/sucss/components/_type.scss */
+/* line 226, scss/sucss/components/_type.scss */
 ins {
   text-decoration: none;
   border-bottom: 1px solid;
 }
 
-/* line 225, scss/sucss/components/_type.scss */
+/* line 242, scss/sucss/components/_type.scss */
 kbd {
   padding: 2px 4px;
   font-size: 0.9em;
@@ -1041,7 +1083,7 @@ kbd {
   color: white;
 }
 
-/* line 239, scss/sucss/components/_type.scss */
+/* line 256, scss/sucss/components/_type.scss */
 pre {
   margin-bottom: 1em;
   padding: 15px;
@@ -1049,7 +1091,7 @@ pre {
   background: #f3f3f7;
 }
 
-/* line 257, scss/sucss/components/_type.scss */
+/* line 274, scss/sucss/components/_type.scss */
 code {
   padding: 2px 4px;
   border-radius: 3px;
@@ -1059,49 +1101,49 @@ code {
   font-size: 0.9em;
 }
 
-/* line 279, scss/sucss/components/_type.scss */
+/* line 296, scss/sucss/components/_type.scss */
 blockquote {
   margin-bottom: 1em;
   padding: 0.5em 1em;
   border-left: 3px solid #ccebff;
 }
-/* line 283, scss/sucss/components/_type.scss */
+/* line 300, scss/sucss/components/_type.scss */
 blockquote p {
   font-weight: inherit;
   font-style: normal;
   font-size: 1em;
   font-family: inherit;
 }
-/* line 288, scss/sucss/components/_type.scss */
+/* line 305, scss/sucss/components/_type.scss */
 blockquote p:last-child {
   margin-bottom: 0;
 }
-/* line 290, scss/sucss/components/_type.scss */
+/* line 307, scss/sucss/components/_type.scss */
 blockquote footer, blockquote p + cite, blockquote footer cite {
   font-style: normal;
 }
-/* line 291, scss/sucss/components/_type.scss */
+/* line 308, scss/sucss/components/_type.scss */
 blockquote footer, blockquote p + cite {
   color: #a6a6a6;
 }
-/* line 292, scss/sucss/components/_type.scss */
+/* line 309, scss/sucss/components/_type.scss */
 blockquote footer:before {
   content: '\2014 \00A0';
 }
-/* line 295, scss/sucss/components/_type.scss */
+/* line 312, scss/sucss/components/_type.scss */
 .ie6 blockquote p, .ie7 blockquote p, .ie8 blockquote p {
   margin-bottom: 0;
 }
-/* line 296, scss/sucss/components/_type.scss */
+/* line 313, scss/sucss/components/_type.scss */
 .ie6 blockquote p + *, .ie7 blockquote p + *, .ie8 blockquote p + * {
   margin-top: 1em;
 }
-/* line 297, scss/sucss/components/_type.scss */
+/* line 314, scss/sucss/components/_type.scss */
 .ie6 blockquote cite, .ie7 blockquote cite, .ie8 blockquote cite {
   display: inline-block;
 }
 
-/* line 301, scss/sucss/components/_type.scss */
+/* line 318, scss/sucss/components/_type.scss */
 blockquote.blockquote--highlight {
   outline: 10px solid #0099ff;
   border-color: initial;
@@ -1111,11 +1153,11 @@ blockquote.blockquote--highlight {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 307, scss/sucss/components/_type.scss */
+/* line 324, scss/sucss/components/_type.scss */
 blockquote.blockquote--highlight footer, blockquote.blockquote--highlight p + cite {
   color: #cccccc;
 }
-/* line 310, scss/sucss/components/_type.scss */
+/* line 327, scss/sucss/components/_type.scss */
 blockquote.blockquote--highlight cite {
   font-weight: 400;
 }
@@ -1161,115 +1203,109 @@ table tr:nth-of-type(even) {
   background: #e6e6e6;
 }
 
-/* line 35, scss/sucss/components/_buttons.scss */
+/* line 64, scss/sucss/components/_buttons.scss */
 .btn-default, .btn {
-  box-shadow: 0px 0.2em 0px 0px #e6e6e6;
+  border: 1px solid #e6e6e6;
   background-color: white;
   color: black;
 }
-/* line 8, scss/sucss/components/_buttons.scss */
+/* line 9, scss/sucss/components/_buttons.scss */
 .btn-default:hover, .btn:hover, .btn-default:focus, .btn:focus {
-  box-shadow: 0px 0.2em 0px 0px #cccccc;
   background-color: #e6e6e6;
   color: black;
 }
 /* line 14, scss/sucss/components/_buttons.scss */
 .btn-default:active, .btn:active {
-  box-shadow: none;
-  top: 0.2em;
+  background-color: #d9d9d9;
+  color: black;
 }
 
-/* line 36, scss/sucss/components/_buttons.scss */
+/* line 65, scss/sucss/components/_buttons.scss */
 .btn-primary {
-  box-shadow: 0px 0.2em 0px 0px #007acc;
+  border: 1px solid #007acc;
   background-color: #0099ff;
   color: white;
 }
-/* line 8, scss/sucss/components/_buttons.scss */
+/* line 9, scss/sucss/components/_buttons.scss */
 .btn-primary:hover, .btn-primary:focus {
-  box-shadow: 0px 0.2em 0px 0px #005c99;
   background-color: #007acc;
   color: white;
 }
 /* line 14, scss/sucss/components/_buttons.scss */
 .btn-primary:active {
-  box-shadow: none;
-  top: 0.2em;
+  background-color: #006bb3;
+  color: white;
 }
 
-/* line 37, scss/sucss/components/_buttons.scss */
+/* line 66, scss/sucss/components/_buttons.scss */
 .btn-success {
-  box-shadow: 0px 0.2em 0px 0px #25a25a;
+  border: 1px solid #25a25a;
   background-color: #2ecc71;
   color: white;
 }
-/* line 8, scss/sucss/components/_buttons.scss */
+/* line 9, scss/sucss/components/_buttons.scss */
 .btn-success:hover, .btn-success:focus {
-  box-shadow: 0px 0.2em 0px 0px #1b7943;
   background-color: #25a25a;
   color: white;
 }
 /* line 14, scss/sucss/components/_buttons.scss */
 .btn-success:active {
-  box-shadow: none;
-  top: 0.2em;
+  background-color: #208e4e;
+  color: white;
 }
 
-/* line 38, scss/sucss/components/_buttons.scss */
+/* line 67, scss/sucss/components/_buttons.scss */
 .btn-info {
-  box-shadow: 0px 0.2em 0px 0px #31b0d5;
+  border: 1px solid #31b0d5;
   background-color: #5bc0de;
   color: white;
 }
-/* line 8, scss/sucss/components/_buttons.scss */
+/* line 9, scss/sucss/components/_buttons.scss */
 .btn-info:hover, .btn-info:focus {
-  box-shadow: 0px 0.2em 0px 0px #2390b0;
   background-color: #31b0d5;
   color: white;
 }
 /* line 14, scss/sucss/components/_buttons.scss */
 .btn-info:active {
-  box-shadow: none;
-  top: 0.2em;
+  background-color: #28a1c5;
+  color: white;
 }
 
-/* line 39, scss/sucss/components/_buttons.scss */
+/* line 68, scss/sucss/components/_buttons.scss */
 .btn-warning {
-  box-shadow: 0px 0.2em 0px 0px #c87f0a;
+  border: 1px solid #c87f0a;
   background-color: #f39c12;
   color: white;
 }
-/* line 8, scss/sucss/components/_buttons.scss */
+/* line 9, scss/sucss/components/_buttons.scss */
 .btn-warning:hover, .btn-warning:focus {
-  box-shadow: 0px 0.2em 0px 0px #976008;
   background-color: #c87f0a;
   color: white;
 }
 /* line 14, scss/sucss/components/_buttons.scss */
 .btn-warning:active {
-  box-shadow: none;
-  top: 0.2em;
+  background-color: #b06f09;
+  color: white;
 }
 
-/* line 40, scss/sucss/components/_buttons.scss */
+/* line 69, scss/sucss/components/_buttons.scss */
 .btn-danger {
-  box-shadow: 0px 0.2em 0px 0px #c9302c;
+  border: 1px solid #c9302c;
   background-color: #d9534f;
   color: white;
 }
-/* line 8, scss/sucss/components/_buttons.scss */
+/* line 9, scss/sucss/components/_buttons.scss */
 .btn-danger:hover, .btn-danger:focus {
-  box-shadow: 0px 0.2em 0px 0px #a02622;
   background-color: #c9302c;
   color: white;
 }
 /* line 14, scss/sucss/components/_buttons.scss */
 .btn-danger:active {
-  box-shadow: none;
-  top: 0.2em;
+  background-color: #b52b27;
+  color: white;
 }
 
-/* line 43, scss/sucss/components/_buttons.scss */
+/* line 75, scss/sucss/components/_buttons.scss */
 .btn {
   position: relative;
   display: inline-block;
@@ -1285,7 +1321,7 @@ table tr:nth-of-type(even) {
   font-size: 0.875em;
   line-height: 1.25;
 }
-/* line 57, scss/sucss/components/_buttons.scss */
+/* line 89, scss/sucss/components/_buttons.scss */
 .btn, .btn:hover {
   border: none;
 }

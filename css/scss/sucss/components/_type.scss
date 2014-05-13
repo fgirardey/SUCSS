@@ -147,10 +147,27 @@ ul.square {	list-style-type: square; }
 //
 // Type utility
 //
-.text-right { text-align: right; }
-.text-left { text-align: left; }
-.text-center { text-align: center; }
-.text-justify { text-align: justify; }
+@include media {
+	.text-right { text-align: right; }
+	.text-left { text-align: left; }
+	.text-center { text-align: center; }
+	.text-justify { text-align: justify; }
+}
+
+@include media(medium-up) {
+	.m-text-right { text-align: right; }
+	.m-text-left { text-align: left; }
+	.m-text-center { text-align: center; }
+	.m-text-justify { text-align: justify; }
+}
+
+@include media(large-up) {
+	.l-text-right { text-align: right; }
+	.l-text-left { text-align: left; }
+	.l-text-center { text-align: center; }
+	.l-text-justify { text-align: justify; }
+}
+
 
 
 
