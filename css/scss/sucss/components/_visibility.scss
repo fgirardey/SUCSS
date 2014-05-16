@@ -1,0 +1,80 @@
+
+//
+// Hide classes
+//
+@include media(small-up) {
+	.s-hide {
+		display: none;
+	}
+}
+
+@include media(medium-up) {
+	.m-hide {
+		display: none;
+	}
+}
+
+@include media(large-up) {
+	.l-hide {
+		display: none;
+	}
+}
+
+@include media(small-only) {
+	.s-only-hide {
+		display: none;
+	}
+}
+
+@include media(medium-only) {
+	.m-only-hide {
+		display: none;
+	}
+}
+
+@include media(large-only) {
+	.l-only-hide {
+		display: none;
+	}
+}
+
+
+
+//
+// Show classes
+//
+@include media(small-up) {
+	.s-show {
+		display: inherit;
+	}
+}
+
+@include media(medium-up) {
+	.m-show {
+		display: inherit;
+	}
+}
+
+@include media(large-up) {
+	.l-show {
+		display: inherit;
+	}
+}
+
+@include media(small-only) {
+	.s-only-show {
+		display: inherit;
+	}
+}
+
+@include media(medium-only) {
+	.m-only-show {
+		display: inherit;
+	}
+}
+
+@include media(large-only) {
+	.l-only-show {
+		display: inherit;
+	}
+}
