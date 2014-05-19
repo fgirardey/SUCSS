@@ -1,0 +1,177 @@
+
+//
+// Navbar
+//
+$navbar-bg: $grey-color !default;
+$navbar-font-family: join("Roboto", $body-font-family) !default;
+$navbar-font-color: #fff !default;
+$navbar-font-size: 1.2em !default;
+$navbar-height: 3em !default;
+$navbar-text-transform: uppercase !default;
+
+$navbar-link-padding: 0.6em 2em !default;
+$navbar-link-bg-hover: darken($navbar-bg, 20%) !default;
+
+$navbar-submenu-padding-left: 2em !default;
+
+.navbar {
+	background: $navbar-bg;
+	color: $navbar-font-color;
+	text-transform: $navbar-text-transform;
+	font-size: $navbar-font-size;
+	font-family: $navbar-font-family;
+}
+
+.navbar > [class*="menu"] {
+	overflow: hidden;
+	max-height: 0;
+	height: 100%;
+	transition: max-height 300ms ease;
+	@include grid-row();
+}
+
+
+.navbar ul {
+	position: relative;
+	z-index: 10;
+	display: block;
+	margin: 0;
+	width: 100%;
+	background: $navbar-bg;
+	list-style-type: none;
+}
+
+.navbar ul li {
+	display: inline-block;
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.navbar ul li a {
+	display: inline-block;
+	padding: $navbar-link-padding;
+	width: 100%;
+	border-bottom: none;
+	color: $navbar-font-color;
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+	background: $navbar-link-bg-hover;
+	color: get-color($navbar-link-bg-hover);
+}
+
+	.navbar ul ul {
+		padding-left: $navbar-submenu-padding-left;
+	}
+
+//
+// Toggle Navbar
+//
+$navbar-toggle-font-size: 1em !default;
+$navbar-toggle-bg: $grey-color !default;
+
+$navbar-toggle-hover-bg: lighten($grey-color, 10%) !default;
+
+.navbar [data-toggle="toggle"] {
+	position: relative;
+	display: inline-block;
+	float: right;
+	margin: 0.5em;
+	padding: 0.6em;
+	height: 2em;
+	outline: 0;
+	border: 1px solid rgba(0, 0, 0, 0);
+	border-radius: 4px;
+	background: $navbar-toggle-bg;
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-appearance: none;
+	user-select: none;
+	&:hover {
+		background: $navbar-toggle-hover-bg;
+	}
+}
+
+.navbar [data-toggle="toggle"] .toggle-title {
+	position: absolute;
+	line-height: 3em;
+	top: -0.5em;
+	right: 2.8em;
+}
+
+.navbar [data-toggle="toggle"] .toggle-navicon {
+	position: relative;
+	display: block;
+	width: 1.3em;
+	height: 2px;
+	background-color: #FFF;
+	transition: 0.3s;
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 1.3em;
+		height: 2px;
+		background: #FFF;
+		transition: 0.3s;
+	}
+	&:before { top: -6px; }
+	&:after  { top: 6px; }
+}
+
+.csstransforms .navbar [data-toggle="toggle"].active .toggle-navicon {
+	background: transparent;
+	&:before {
+		top: 0;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	&:after {
+		top: 0;
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+}
+
+@include media(medium-up) {
+	.navbar [data-toggle="toggle"] {
+		display: none;
+	}
+
+	.navbar > [class*="menu"] {
+		overflow: visible;
+		max-height: none !important;
+	}
+
+	.navbar ul li {
+		position: relative;
+		overflow: visible;
+		width: auto;
+	}
+
+	.navbar ul ul {
+		padding-left: 0;
+		display: none;
+	}
+
+	.navbar ul li:hover > ul,
+	.navbar ul li:focus > ul {
+		display: block;
+		position: absolute;
+	}
+
+	.navbar ul ul li {
+		width: 100%;
+	}
+
+	.navbar ul ul ul {
+		display: none;
+		top: 0;
+		left: 100%;
+	}
+}
