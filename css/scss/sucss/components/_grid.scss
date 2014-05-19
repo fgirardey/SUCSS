@@ -7,7 +7,6 @@ $column-gutter: 30px !default;
 
 $total-columns: 12 !default;
 
-// Output row rules
 @mixin grid-row($behavior: false) {
 	@if $behavior == nest {
 		width: auto;
@@ -39,9 +38,6 @@ $total-columns: 12 !default;
 		@include grid-row($behavior:nest);
 	}
 }
-
-
-
 
 [class*="col-"] {
 	position: relative;
