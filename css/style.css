@@ -489,101 +489,102 @@ a.has-image {
 img {
   display: inline-block;
   max-width: 100%;
+  width: auto;
   height: auto;
   vertical-align: middle;
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 85, scss/sucss/components/_global.scss */
+/* line 86, scss/sucss/components/_global.scss */
 img.alignright {
   float: right !important;
   margin: 0 0 1em 1em;
 }
 
-/* line 86, scss/sucss/components/_global.scss */
+/* line 87, scss/sucss/components/_global.scss */
 img.alignleft {
   float: left !important;
   margin: 0 1em 1em 0;
 }
 
-/* line 87, scss/sucss/components/_global.scss */
+/* line 88, scss/sucss/components/_global.scss */
 img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 89, scss/sucss/components/_global.scss */
+/* line 90, scss/sucss/components/_global.scss */
 .radius {
   border-radius: 5px;
 }
 
-/* line 109, scss/sucss/components/_global.scss */
+/* line 110, scss/sucss/components/_global.scss */
 .clearfix {
   *zoom: 1;
 }
-/* line 94, scss/sucss/components/_global.scss */
+/* line 95, scss/sucss/components/_global.scss */
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;
 }
-/* line 98, scss/sucss/components/_global.scss */
+/* line 99, scss/sucss/components/_global.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 110, scss/sucss/components/_global.scss */
+/* line 111, scss/sucss/components/_global.scss */
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 118, scss/sucss/components/_global.scss */
+/* line 119, scss/sucss/components/_global.scss */
 .collapse {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
 
-/* line 123, scss/sucss/components/_global.scss */
+/* line 124, scss/sucss/components/_global.scss */
 .collapse-left {
   padding-left: 0 !important;
 }
 
-/* line 127, scss/sucss/components/_global.scss */
+/* line 128, scss/sucss/components/_global.scss */
 .collapse-right {
   padding-right: 0 !important;
 }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 133, scss/sucss/components/_global.scss */
+  /* line 134, scss/sucss/components/_global.scss */
   .m-collapse {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
 
-  /* line 137, scss/sucss/components/_global.scss */
+  /* line 138, scss/sucss/components/_global.scss */
   .m-collapse-left {
     padding-left: 0 !important;
   }
 
-  /* line 140, scss/sucss/components/_global.scss */
+  /* line 141, scss/sucss/components/_global.scss */
   .m-collapse-right {
     padding-right: 0 !important;
   }
 }
 @media only screen and (min-width: 64.0625em) {
-  /* line 146, scss/sucss/components/_global.scss */
+  /* line 147, scss/sucss/components/_global.scss */
   .l-collapse {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
 
-  /* line 150, scss/sucss/components/_global.scss */
+  /* line 151, scss/sucss/components/_global.scss */
   .l-collapse-left {
     padding-left: 0 !important;
   }
 
-  /* line 153, scss/sucss/components/_global.scss */
+  /* line 154, scss/sucss/components/_global.scss */
   .l-collapse-right {
     padding-right: 0 !important;
   }
@@ -598,12 +599,12 @@ img.aligncenter {
   width: 100%;
   *zoom: 1;
 }
-/* line 94, scss/sucss/components/_global.scss */
+/* line 95, scss/sucss/components/_global.scss */
 .row:before, .row:after {
   content: " ";
   display: table;
 }
-/* line 98, scss/sucss/components/_global.scss */
+/* line 99, scss/sucss/components/_global.scss */
 .row:after {
   clear: both;
 }
@@ -615,12 +616,12 @@ img.aligncenter {
   margin-left: -15px;
   *zoom: 1;
 }
-/* line 94, scss/sucss/components/_global.scss */
+/* line 95, scss/sucss/components/_global.scss */
 .row [class*="col-"] .row:before, .row [class*="col-"] .row:after {
   content: " ";
   display: table;
 }
-/* line 98, scss/sucss/components/_global.scss */
+/* line 99, scss/sucss/components/_global.scss */
 .row [class*="col-"] .row:after {
   clear: both;
 }
@@ -1591,12 +1592,12 @@ select {
   width: 100%;
   *zoom: 1;
 }
-/* line 94, scss/sucss/components/_global.scss */
+/* line 95, scss/sucss/components/_global.scss */
 .navbar > [class*="menu"]:before, .navbar > [class*="menu"]:after {
   content: " ";
   display: table;
 }
-/* line 98, scss/sucss/components/_global.scss */
+/* line 99, scss/sucss/components/_global.scss */
 .navbar > [class*="menu"]:after {
   clear: both;
 }
