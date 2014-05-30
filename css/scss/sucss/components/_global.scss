@@ -64,6 +64,7 @@ a {
 	}
 	&.has-image {
 		display: inline-block;
+		max-width: 100%;
 		border: none;
 	}
 }

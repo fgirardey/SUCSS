@@ -3,7 +3,8 @@
 // Navbar
 //
 $navbar-bg: $grey-color !default;
-$navbar-font-family: join("Roboto", $body-font-family) !default;
+$navbar-font-weight: bold !default;
+$navbar-font-family: $body-font-family !default;
 $navbar-font-color: #fff !default;
 $navbar-font-size: 1.2em !default;
 $navbar-height: 3em !default;
@@ -18,8 +19,10 @@ $navbar-submenu-padding-left: 2em !default;
 	background: $navbar-bg;
 	color: $navbar-font-color;
 	text-transform: $navbar-text-transform;
+	font-weight: $navbar-font-weight;
 	font-size: $navbar-font-size;
 	font-family: $navbar-font-family;
+	@include clearfix();
 }
 
 .navbar > [class*="menu"] {
@@ -36,7 +39,6 @@ $navbar-submenu-padding-left: 2em !default;
 	z-index: 10;
 	display: block;
 	margin: 0;
-	width: 100%;
 	background: $navbar-bg;
 	list-style-type: none;
 }
@@ -56,6 +58,7 @@ $navbar-submenu-padding-left: 2em !default;
 	color: $navbar-font-color;
 	font-weight: inherit;
 	font-size: inherit;
+	text-decoration: none;
 }
 
 .navbar ul li a:hover,
@@ -64,9 +67,11 @@ $navbar-submenu-padding-left: 2em !default;
 	color: get-color($navbar-link-bg-hover);
 }
 
-	.navbar ul ul {
-		padding-left: $navbar-submenu-padding-left;
-	}
+.navbar ul ul {
+	padding-left: $navbar-submenu-padding-left;
+}
+
+
 
 //
 // Toggle Navbar
@@ -138,6 +143,8 @@ $navbar-toggle-hover-bg: lighten($grey-color, 10%) !default;
 	}
 }
 
+
+
 @include media(medium-up) {
 	.navbar [data-toggle="toggle"] {
 		display: none;
@@ -149,7 +156,6 @@ $navbar-toggle-hover-bg: lighten($grey-color, 10%) !default;
 	}
 
 	.navbar ul li {
-		position: relative;
 		overflow: visible;
 		width: auto;
 	}
@@ -166,6 +172,7 @@ $navbar-toggle-hover-bg: lighten($grey-color, 10%) !default;
 	}
 
 	.navbar ul ul li {
+		clear: both;
 		width: 100%;
 	}
 
