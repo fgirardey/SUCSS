@@ -65,12 +65,3 @@ $large-only: "#{$screen} and (min-width: #{nth($large-range, 1)}) and (max-width
 		@content;
 	}
 }
-
-
-
-//
-// Underline mixin
-//
-@mixin underline($style: solid) {
-	border-bottom: 1px $style;
-}

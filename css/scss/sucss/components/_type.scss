@@ -201,7 +201,7 @@ address {
 $abbr-border-bottom: dotted !default;
 
 abbr[title] {
-	@include underline($style: $abbr-border-bottom);
+	border-bottom: $abbr-border-bottom;
 	cursor: help;
 }
 

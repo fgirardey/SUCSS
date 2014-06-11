@@ -21,6 +21,8 @@ $global-var-font-color: #C7254E !default;
 $grey-color: #ccc !default;
 
 $primary-color: #09f !default;
+$secondary-color: #036 !default;
+
 $success-color: #2ecc71 !default;
 $info-color: #5bc0de !default;
 $warning-color: #f39c12 !default;
@@ -49,18 +51,18 @@ body {
 //
 // Link Styles
 //
-$link-decoration: none !default;
 $link-color: blue !default;
+$link-decoration: none !default;
 
-$link-hover-decoration: solid !default;
-$link-hover-color: darken($link-color, 10%) !default;
+$link-hover-color: $link-color !default;
+$link-hover-decoration: underline !default;
 
 a {
 	color: $link-color;
 	text-decoration: $link-decoration;
 	&:hover {
 		color: $link-hover-color;
-		@include underline($style: $link-hover-decoration);
+		text-decoration: $link-hover-decoration;
 	}
 	&.has-image {
 		display: inline-block;

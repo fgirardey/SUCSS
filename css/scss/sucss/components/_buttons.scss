@@ -43,27 +43,30 @@ $btn-line-height: 1.25 !default;
 $btn-margin-top: 0.31em !default;
 $btn-margin-bottom: $btn-margin-top !default;
 
-$btn-default-bg-color: #fff !default;
+$btn-default-bg-color: #333 !default;
 $btn-primary-bg-color: $primary-color !default;
+$btn-secondary-bg-color: $secondary-color !default;
 $btn-success-bg-color: $success-color !default;
 $btn-info-bg-color: $info-color !default;
 $btn-warning-bg-color: $warning-color !default;
 $btn-danger-bg-color: $danger-color !default;
 $btn-link-bg-color: $link-color !default;
 
-.btn-default { @include btn-color($bg-color: $btn-default-bg-color); }
-.btn-primary { @include btn-color($bg-color: $btn-primary-bg-color); }
-.btn-success { @include btn-color($bg-color: $btn-success-bg-color); }
-.btn-info    { @include btn-color($bg-color: $btn-info-bg-color); }
-.btn-warning { @include btn-color($bg-color: $btn-warning-bg-color); }
-.btn-danger  { @include btn-color($bg-color: $btn-danger-bg-color); }
+.btn-default    { @include btn-color($bg-color: $btn-default-bg-color); }
+.btn-primary    { @include btn-color($bg-color: $btn-primary-bg-color); }
+.btn-secondary  { @include btn-color($bg-color: $btn-secondary-bg-color); }
+.btn-success    { @include btn-color($bg-color: $btn-success-bg-color); }
+.btn-info       { @include btn-color($bg-color: $btn-info-bg-color); }
+.btn-warning    { @include btn-color($bg-color: $btn-warning-bg-color); }
+.btn-danger     { @include btn-color($bg-color: $btn-danger-bg-color); }
 
-.btn-push-default { @include btn-push-color($bg-color: $btn-default-bg-color); }
-.btn-push-primary { @include btn-push-color($bg-color: $btn-primary-bg-color); }
-.btn-push-success { @include btn-push-color($bg-color: $btn-success-bg-color); }
-.btn-push-info    { @include btn-push-color($bg-color: $btn-info-bg-color); }
-.btn-push-warning { @include btn-push-color($bg-color: $btn-warning-bg-color); }
-.btn-push-danger  { @include btn-push-color($bg-color: $btn-danger-bg-color); }
+.btn-push-default   { @include btn-push-color($bg-color: $btn-default-bg-color); }
+.btn-push-primary   { @include btn-push-color($bg-color: $btn-primary-bg-color); }
+.btn-push-secondary { @include btn-push-color($bg-color: $btn-secondary-bg-color); }
+.btn-push-success   { @include btn-push-color($bg-color: $btn-success-bg-color); }
+.btn-push-info      { @include btn-push-color($bg-color: $btn-info-bg-color); }
+.btn-push-warning   { @include btn-push-color($bg-color: $btn-warning-bg-color); }
+.btn-push-danger    { @include btn-push-color($bg-color: $btn-danger-bg-color); }
 
 
 .btn {
@@ -87,4 +90,12 @@ $btn-link-bg-color: $link-color !default;
 .btn-push {
 	@extend .btn;
 	@extend .btn-push-default;
+}
+
+
+$btn-disabled-bg-color: $grey-color !default;
+
+.btn-disabled,
+.btn[disabled] {
+	background: $btn-disabled-bg-color;
 }
