@@ -1174,7 +1174,7 @@ blockquote.blockquote--highlight cite {
 /* line 21, scss/sucss/components/_tables.scss */
 table {
   width: 100%;
-  border: 2px solid white;
+  border: none;
 }
 
 /* line 26, scss/sucss/components/_tables.scss */
