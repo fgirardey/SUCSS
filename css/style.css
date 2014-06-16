@@ -1171,12 +1171,13 @@ blockquote.blockquote--highlight cite {
   font-weight: 400;
 }
 
-/* line 10, scss/sucss/components/_tables.scss */
+/* line 21, scss/sucss/components/_tables.scss */
 table {
   width: 100%;
+  border: 2px solid white;
 }
 
-/* line 14, scss/sucss/components/_tables.scss */
+/* line 26, scss/sucss/components/_tables.scss */
 table th,
 table td {
   padding: 0.5em 1em;
@@ -1185,28 +1186,29 @@ table td {
   line-height: 1;
 }
 
-/* line 22, scss/sucss/components/_tables.scss */
+/* line 34, scss/sucss/components/_tables.scss */
 table thead {
-  color: white;
   background: #0099ff;
+  color: white;
   font-size: 1.25em;
 }
 
-/* line 28, scss/sucss/components/_tables.scss */
+/* line 40, scss/sucss/components/_tables.scss */
 table thead th {
+  padding: 0.5em 1em;
   border-right: 2px solid white;
   border-left: 2px solid white;
 }
-/* line 31, scss/sucss/components/_tables.scss */
+/* line 44, scss/sucss/components/_tables.scss */
 table thead th:first-child {
   border-left: none;
 }
-/* line 32, scss/sucss/components/_tables.scss */
+/* line 45, scss/sucss/components/_tables.scss */
 table thead th:last-child {
   border-right: none;
 }
 
-/* line 35, scss/sucss/components/_tables.scss */
+/* line 48, scss/sucss/components/_tables.scss */
 table tr.even,
 table tr:nth-of-type(even) {
   background: #e6e6e6;
