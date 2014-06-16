@@ -1,33 +1,46 @@
 
+//
+// Tables
+//
 $table-border: 2px solid #fff !default;
 
 $table-thead-bg: $primary-color !default;
 $table-thead-color: #fff !default;
+$table-thead-font-size: 1.25em !default;
+
+$table-thead-cell-padding: 0.5em 1em !default;
+$table-thead-cell-border: 2px solid #fff !default;
+
+$table-cell-padding: 0.5em 1em !default;
+$table-cell-font-size: 1em !default;
+$table-cell-line-height: 1 !default;
 
 $table-even-bg: lighten($grey-color, 10%) !default;
 
 
 table {
 	width: 100%;
+	border: $table-border;
 }
 
 table th,
 table td {
-	padding: 0.5em 1em;
+	padding: $table-cell-padding;
 	text-align: left;
-	font-size: 1em;
-	line-height: 1;
+	font-size: $table-cell-font-size;
+	line-height: $table-cell-line-height;
 }
 
 table thead {
-	color: $table-thead-color;
 	background: $table-thead-bg;
-	font-size: 1.25em;
+	color: $table-thead-color;
+	font-size: $table-thead-font-size;
 }
 
 table thead th {
-	border-right: $table-border;
-	border-left: $table-border;
+	padding: $table-thead-cell-padding;
+	border-right: $table-thead-cell-border;
+	border-left: $table-thead-cell-border;
 	&:first-child { border-left: none; }
 	&:last-child { border-right: none; }
 }
