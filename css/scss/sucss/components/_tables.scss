@@ -45,7 +45,9 @@ table thead th {
 	&:last-child { border-right: none; }
 }
 
-table tr.even,
-table tr:nth-of-type(even) {
-	background: $table-even-bg;
+@if $table-even-bg != false {
+	table tr.even,
+	table tr:nth-of-type(even) {
+		background: $table-even-bg;
+	}
 }

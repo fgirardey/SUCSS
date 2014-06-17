@@ -23,6 +23,7 @@ code, kbd, pre, samp {
 //
 // Header Styles
 //
+$header-display: block !default;
 $header-margin-vertical: $rem-base !default;
 $header-font-color: inherit !default;
 $header-font-weight: 600 !default;
@@ -57,6 +58,7 @@ $h6-font-size: 1.25em !default;
 }
 
 @include hn {
+	display: $header-display;
 	margin: $header-margin-vertical 0;
 	margin: rem-calc($header-margin-vertical) 0;
 	color: $header-font-color;
