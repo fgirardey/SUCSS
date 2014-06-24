@@ -470,122 +470,125 @@ a.has-image {
   max-width: 100%;
   border: none;
 }
+/* line 72, scss/sucss/components/_global.scss */
+.ie6 a.has-image, .ie7 a.has-image, .ie8 a.has-image {
+  width: 100%;
+}
 
-/* line 76, scss/sucss/components/_global.scss */
+/* line 79, scss/sucss/components/_global.scss */
 .right, .alignright {
   float: right !important;
 }
 
-/* line 77, scss/sucss/components/_global.scss */
+/* line 80, scss/sucss/components/_global.scss */
 .left, .alignleft {
   float: left !important;
 }
 
-/* line 78, scss/sucss/components/_global.scss */
+/* line 81, scss/sucss/components/_global.scss */
 .hide {
   display: none;
 }
 
-/* line 80, scss/sucss/components/_global.scss */
+/* line 83, scss/sucss/components/_global.scss */
 img {
   display: inline-block;
   max-width: 100%;
-  width: auto;
   height: auto;
   vertical-align: middle;
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 89, scss/sucss/components/_global.scss */
+/* line 91, scss/sucss/components/_global.scss */
 img.alignright {
   float: right !important;
   margin: 0 0 1em 1em;
 }
 
-/* line 90, scss/sucss/components/_global.scss */
+/* line 92, scss/sucss/components/_global.scss */
 img.alignleft {
   float: left !important;
   margin: 0 1em 1em 0;
 }
 
-/* line 91, scss/sucss/components/_global.scss */
+/* line 93, scss/sucss/components/_global.scss */
 img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 93, scss/sucss/components/_global.scss */
+/* line 95, scss/sucss/components/_global.scss */
 .radius {
   border-radius: 5px;
 }
 
-/* line 113, scss/sucss/components/_global.scss */
+/* line 115, scss/sucss/components/_global.scss */
 .clearfix {
   *zoom: 1;
 }
-/* line 98, scss/sucss/components/_global.scss */
+/* line 100, scss/sucss/components/_global.scss */
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;
 }
-/* line 102, scss/sucss/components/_global.scss */
+/* line 104, scss/sucss/components/_global.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 114, scss/sucss/components/_global.scss */
+/* line 116, scss/sucss/components/_global.scss */
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 122, scss/sucss/components/_global.scss */
+/* line 124, scss/sucss/components/_global.scss */
 .collapse {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
 
-/* line 127, scss/sucss/components/_global.scss */
+/* line 129, scss/sucss/components/_global.scss */
 .collapse-left {
   padding-left: 0 !important;
 }
 
-/* line 131, scss/sucss/components/_global.scss */
+/* line 133, scss/sucss/components/_global.scss */
 .collapse-right {
   padding-right: 0 !important;
 }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 137, scss/sucss/components/_global.scss */
+  /* line 139, scss/sucss/components/_global.scss */
   .m-collapse {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
 
-  /* line 141, scss/sucss/components/_global.scss */
+  /* line 143, scss/sucss/components/_global.scss */
   .m-collapse-left {
     padding-left: 0 !important;
   }
 
-  /* line 144, scss/sucss/components/_global.scss */
+  /* line 146, scss/sucss/components/_global.scss */
   .m-collapse-right {
     padding-right: 0 !important;
   }
 }
 @media only screen and (min-width: 64.0625em) {
-  /* line 150, scss/sucss/components/_global.scss */
+  /* line 152, scss/sucss/components/_global.scss */
   .l-collapse {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
 
-  /* line 154, scss/sucss/components/_global.scss */
+  /* line 156, scss/sucss/components/_global.scss */
   .l-collapse-left {
     padding-left: 0 !important;
   }
 
-  /* line 157, scss/sucss/components/_global.scss */
+  /* line 159, scss/sucss/components/_global.scss */
   .l-collapse-right {
     padding-right: 0 !important;
   }
@@ -600,12 +603,12 @@ img.aligncenter {
   width: 100%;
   *zoom: 1;
 }
-/* line 98, scss/sucss/components/_global.scss */
+/* line 100, scss/sucss/components/_global.scss */
 .row:before, .row:after {
   content: " ";
   display: table;
 }
-/* line 102, scss/sucss/components/_global.scss */
+/* line 104, scss/sucss/components/_global.scss */
 .row:after {
   clear: both;
 }
@@ -617,12 +620,12 @@ img.aligncenter {
   margin-left: -15px;
   *zoom: 1;
 }
-/* line 98, scss/sucss/components/_global.scss */
+/* line 100, scss/sucss/components/_global.scss */
 .row [class*="col-"] .row:before, .row [class*="col-"] .row:after {
   content: " ";
   display: table;
 }
-/* line 102, scss/sucss/components/_global.scss */
+/* line 104, scss/sucss/components/_global.scss */
 .row [class*="col-"] .row:after {
   clear: both;
 }
@@ -877,7 +880,7 @@ h6, .h6 {
   font-weight: 600;
   font-style: normal;
   font-family: inherit;
-  line-height: 1.25;
+  line-height: normal;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1265,65 +1268,65 @@ table tr:nth-of-type(even) {
 
 /* line 58, scss/sucss/components/_buttons.scss */
 .btn-success {
-  background-color: #2ecc71;
+  background-color: green;
   color: white;
 }
 /* line 8, scss/sucss/components/_buttons.scss */
 .btn-success:hover, .btn-success:focus {
-  background-color: #25a25a;
+  background-color: #004d00;
   color: white;
 }
 /* line 13, scss/sucss/components/_buttons.scss */
 .btn-success:active {
-  background-color: #208e4e;
+  background-color: #003400;
   color: white;
 }
 
 /* line 59, scss/sucss/components/_buttons.scss */
 .btn-info {
-  background-color: #5bc0de;
+  background-color: lightskyblue;
   color: white;
 }
 /* line 8, scss/sucss/components/_buttons.scss */
 .btn-info:hover, .btn-info:focus {
-  background-color: #31b0d5;
+  background-color: #56baf8;
   color: white;
 }
 /* line 13, scss/sucss/components/_buttons.scss */
 .btn-info:active {
-  background-color: #28a1c5;
+  background-color: #3eb0f7;
   color: white;
 }
 
 /* line 60, scss/sucss/components/_buttons.scss */
 .btn-warning {
-  background-color: #f39c12;
+  background-color: orange;
   color: white;
 }
 /* line 8, scss/sucss/components/_buttons.scss */
 .btn-warning:hover, .btn-warning:focus {
-  background-color: #c87f0a;
+  background-color: #cc8400;
   color: white;
 }
 /* line 13, scss/sucss/components/_buttons.scss */
 .btn-warning:active {
-  background-color: #b06f09;
+  background-color: #b37300;
   color: white;
 }
 
 /* line 61, scss/sucss/components/_buttons.scss */
 .btn-danger {
-  background-color: #d9534f;
+  background-color: red;
   color: white;
 }
 /* line 8, scss/sucss/components/_buttons.scss */
 .btn-danger:hover, .btn-danger:focus {
-  background-color: #c9302c;
+  background-color: #cc0000;
   color: white;
 }
 /* line 13, scss/sucss/components/_buttons.scss */
 .btn-danger:active {
-  background-color: #b52b27;
+  background-color: #b30000;
   color: white;
 }
 
@@ -1383,14 +1386,14 @@ table tr:nth-of-type(even) {
 
 /* line 66, scss/sucss/components/_buttons.scss */
 .btn-push-success {
-  box-shadow: 0px 0.2em 0px 0px #25a25a;
-  background-color: #2ecc71;
+  box-shadow: 0px 0.2em 0px 0px #004d00;
+  background-color: green;
   color: white;
 }
 /* line 25, scss/sucss/components/_buttons.scss */
 .btn-push-success:hover, .btn-push-success:focus {
-  box-shadow: 0px 0.2em 0px 0px #1b7943;
-  background-color: #25a25a;
+  box-shadow: 0px 0.2em 0px 0px #001a00;
+  background-color: #004d00;
   color: white;
 }
 /* line 31, scss/sucss/components/_buttons.scss */
@@ -1401,14 +1404,14 @@ table tr:nth-of-type(even) {
 
 /* line 67, scss/sucss/components/_buttons.scss */
 .btn-push-info {
-  box-shadow: 0px 0.2em 0px 0px #31b0d5;
-  background-color: #5bc0de;
+  box-shadow: 0px 0.2em 0px 0px #56baf8;
+  background-color: lightskyblue;
   color: white;
 }
 /* line 25, scss/sucss/components/_buttons.scss */
 .btn-push-info:hover, .btn-push-info:focus {
-  box-shadow: 0px 0.2em 0px 0px #2390b0;
-  background-color: #31b0d5;
+  box-shadow: 0px 0.2em 0px 0px #25a6f6;
+  background-color: #56baf8;
   color: white;
 }
 /* line 31, scss/sucss/components/_buttons.scss */
@@ -1419,14 +1422,14 @@ table tr:nth-of-type(even) {
 
 /* line 68, scss/sucss/components/_buttons.scss */
 .btn-push-warning {
-  box-shadow: 0px 0.2em 0px 0px #c87f0a;
-  background-color: #f39c12;
+  box-shadow: 0px 0.2em 0px 0px #cc8400;
+  background-color: orange;
   color: white;
 }
 /* line 25, scss/sucss/components/_buttons.scss */
 .btn-push-warning:hover, .btn-push-warning:focus {
-  box-shadow: 0px 0.2em 0px 0px #976008;
-  background-color: #c87f0a;
+  box-shadow: 0px 0.2em 0px 0px #996300;
+  background-color: #cc8400;
   color: white;
 }
 /* line 31, scss/sucss/components/_buttons.scss */
@@ -1437,14 +1440,14 @@ table tr:nth-of-type(even) {
 
 /* line 69, scss/sucss/components/_buttons.scss */
 .btn-push-danger {
-  box-shadow: 0px 0.2em 0px 0px #c9302c;
-  background-color: #d9534f;
+  box-shadow: 0px 0.2em 0px 0px #cc0000;
+  background-color: red;
   color: white;
 }
 /* line 25, scss/sucss/components/_buttons.scss */
 .btn-push-danger:hover, .btn-push-danger:focus {
-  box-shadow: 0px 0.2em 0px 0px #a02622;
-  background-color: #c9302c;
+  box-shadow: 0px 0.2em 0px 0px #990000;
+  background-color: #cc0000;
   color: white;
 }
 /* line 31, scss/sucss/components/_buttons.scss */
@@ -1615,12 +1618,12 @@ select {
   font-family: sans-serif;
   *zoom: 1;
 }
-/* line 98, scss/sucss/components/_global.scss */
+/* line 100, scss/sucss/components/_global.scss */
 .navbar:before, .navbar:after {
   content: " ";
   display: table;
 }
-/* line 102, scss/sucss/components/_global.scss */
+/* line 104, scss/sucss/components/_global.scss */
 .navbar:after {
   clear: both;
 }
@@ -1639,12 +1642,12 @@ select {
   width: 100%;
   *zoom: 1;
 }
-/* line 98, scss/sucss/components/_global.scss */
+/* line 100, scss/sucss/components/_global.scss */
 .navbar > [class*="menu"]:before, .navbar > [class*="menu"]:after {
   content: " ";
   display: table;
 }
-/* line 102, scss/sucss/components/_global.scss */
+/* line 104, scss/sucss/components/_global.scss */
 .navbar > [class*="menu"]:after {
   clear: both;
 }

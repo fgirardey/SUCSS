@@ -23,10 +23,10 @@ $grey-color: #ccc !default;
 $primary-color: #09f !default;
 $secondary-color: #036 !default;
 
-$success-color: #2ecc71 !default;
-$info-color: #5bc0de !default;
-$warning-color: #f39c12 !default;
-$danger-color: #d9534f !default;
+$success-color: green !default;
+$info-color: LightSkyBlue !default;
+$warning-color: orange !default;
+$danger-color: red !default;
 
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
@@ -69,6 +69,9 @@ a {
 		max-width: 100%;
 		border: none;
 	}
+	.ie6 &.has-image, .ie7 &.has-image, .ie8 &.has-image {
+		width: 100%;
+	}
 }
 
 
@@ -80,7 +83,6 @@ a {
 img {
 	display: inline-block;
 	max-width: 100%;
-	width: auto;
 	height: auto;
 	vertical-align: middle;
 	-ms-interpolation-mode: bicubic;

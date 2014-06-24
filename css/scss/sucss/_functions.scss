@@ -9,7 +9,7 @@ $rem-base: 16px !default;
 }
 
 @function get-color($color) {
-	@if (lightness( $color ) > 70) {
+	@if (lightness( $color ) > 80) {
 		@return #000;
 	}
 	@else {
