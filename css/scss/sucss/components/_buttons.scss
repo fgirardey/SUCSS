@@ -87,6 +87,10 @@ $btn-link-bg-color: $link-color !default;
 	@extend .btn-default;
 }
 
+.btn:hover {
+	text-decoration: none;
+}
+
 .btn-push {
 	@extend .btn;
 	@extend .btn-push-default;

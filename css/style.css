@@ -1474,7 +1474,12 @@ table tr:nth-of-type(even) {
   line-height: 1.25;
 }
 
-/* line 98, scss/sucss/components/_buttons.scss */
+/* line 90, scss/sucss/components/_buttons.scss */
+.btn:hover, .btn-push:hover {
+  text-decoration: none;
+}
+
+/* line 102, scss/sucss/components/_buttons.scss */
 .btn-disabled,
 .btn[disabled],
 [disabled].btn-push {
