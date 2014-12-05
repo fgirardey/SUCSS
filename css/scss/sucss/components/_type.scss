@@ -255,12 +255,16 @@ kbd {
 //
 $pre-margin-bottom: 1em !default;
 $pre-bg: #F3F3F7 !default;
+$pre-color: #000 !default;
 pre {
 	margin-bottom: $pre-margin-bottom;
 	padding: $column-gutter / 2;
+
+	color: $pre-color;
 	border: 1px solid darken($pre-bg, 10%);
 	background: $pre-bg;
 }
+
 
 
 
